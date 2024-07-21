@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Подключение FancyBox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <!-- Подключение FancyBox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <header class="profile_header">
+        <div class="wrapper">
+            <div class="top_wrapper">
+                    <a href="" class="logo_link">
+                        <img src="img/SVG-icons/Logo_black.svg" alt="" class="logo">
+                    </a>
+                    <nuv class="nuv">
+                        <span class="burger"></span>
+                        <ul class="nuv_list">
+                            <li class="nuv_list-item"><a href="index.html" class="nuv_link">Главная</a></li>
+                            <li class="nuv_list-item"><a href="" class="nuv_link">Программа</a></li>
+                            <li class="nuv_list-item"><a href="catalog.html" class="nuv_link">Каталог разработок</a></li>
+                            <li class="nuv_list-item"><a href="partners.html" class="nuv_link">Индустриальные партнеры</a></li>
+                            <li class="nuv_list-item"><a href="" class="nuv_link">Конкурс</a></li>
+                            <li class="nuv_list-item"><a href="" class="nuv_link">Участникам</a></li>
+                            <li class="nuv_list-item"><a href="contacts.html" class="nuv_link">Контакты</a></li>
+                        </ul>
+                    </nuv>
+                <a href="profile.html" class="entry_button authorized"><img src="img/entry_image.png" alt="" class="profile_entry-image"> <span>Виталий К</span></a>
+            </div>
+            <div class="top_title-container">
+                <div class="profile_owner">
+                    <div class="profile_big-image-container">
+                        <img src="img/entry_image.png" alt="" class="profile_big-image">
+                    </div>
+                    <div class="profile_owner-information">
+                        <h1 class="owner_name">Виталий Кутепов</h1>
+                        <span class="owner_email">medevent@expmed.ru</span>
+                    </div>
+                </div>
+                <a href="#submition_form" data-fancybox class="red_button">Подать проект на конкурс</a>
+            </div>
+            <div class="profile_navigation-container">
+                <ul class="profile_navigation">
+                    <li class="profile_navigation-item"><a href="profile.html" class="profile-item_link profil">Профиль</a></li>
+                    <li class="profile_navigation-item"><a href="profile_projects.html" class="profile-item_link projects">Проекты</a></li>
+                    <li class="profile_navigation-item chosen"><a href="" class="profile-item_link search_projects">Поиск проектов</a></li>
+                    <li class="profile_navigation-item"><a href="" class="profile-item_link communication">Деловое общение</a></li>
+                </ul>
+                <a href="index.html" class="profile-item_link logout_button">Выйти</a>
+            </div>
+        </div>
+    </header>
+    <div class="pop-ups">
+        <form action="" class="pop-up submition_form" id="submition_form">
+            <div class="flex_container submition_flex">
+            <h2 class="form-title">Подать проект на конкурс</h2>
+            <p>После согласования администратором вашего проекта, вы получите уведомление на электронную почту и в личном кабинете</p>
+            <div class="submition_open-list">
+                <span>Вид проекта</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="radio_container hidden">
+                    <div class="radion_container-padding">
+                        <label>
+                            <input type="radio" name="комерция" value="да">
+                            <span>да</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <span>Наименование разработки</span>
+            <input type="text" name="Name of the developer" id="" class="form_input">
+            <span>Описание</span>
+            <textarea name="description" id="" class="form_input form_textarea submition_textarea" placeholder="До 200 символов"></textarea>
+            <span>Лекарственная форма</span>
+            <input type="text" name="Dosage form" id="" class="form_input" placeholder="Например, таблетки">
+            <span>Сфера применения результата исследований или разработки</span>
+            <input type="text" name="Dosage form" id="" class="form_input" placeholder="Например, дерматология">
+            <div class="submition_open-list">
+                <span>Уровень готовности технологии</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="radio_container hidden">
+                    <div class="radion_container-padding">
+                        <label>
+                            <input type="radio" name="комерция" value="да">
+                            <span>да</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="submition_open-list">
+                <span>Готовность к коммерциализации результата разработки</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="radio_container hidden">
+                    <div class="radion_container-padding">
+                        <label>
+                            <input type="radio" name="комерция" value="да">
+                            <span>да</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="submition_open-list">
+                <span>Тип приоритета разработки</span>
+                <span>Можно выбрать несколько вариантов</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="animation_container hidden">
+                    <div class="catalog_search">
+                        <div class="checkbox_container">
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="catalog_checkbox hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                        </div>
+                        <div class="catalog_button-container"><button type="button" class="find_button catalog_gray-button">Применить</button></div>
+                    </div>
+                    </div>
+            </div>
+            <div class="submition_open-list">
+                <span>Сведения о РИД и товарных знаках</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="radio_container hidden">
+                    <div class="radion_container-padding">
+                        <label>
+                            <input type="radio" name="комерция" value="да">
+                            <span>да</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="комерция" value="нет">
+                            <span>нет</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="submition_open-list">
+                <span>Была ли проведена оценка РИД? </span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="radio_container hidden">
+                    <div class="radion_container-padding">
+                        <label>
+                            <input type="radio" name="комерция" value="да">
+                            <span>да</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="комерция" value="нет">
+                            <span>нет</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="submition_open-list">
+                <span>Коммерциализация охраняемой разработки на настоящий момент (если есть)</span>
+                <span>Можно выбрать несколько вариантов</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="animation_container hidden">
+                    <div class="catalog_search">
+                        <div class="checkbox_container">
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="catalog_checkbox hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                        </div>
+                        <div class="catalog_button-container"><button type="button" class="find_button catalog_gray-button">Применить</button></div>
+                    </div>
+                    </div>
+            </div>
+            <div class="submition_open-list">
+                <span>Экономический эффект от коммерциализации на настоящий момент</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="radio_container hidden">
+                    <div class="radion_container-padding">
+                        <label>
+                            <input type="radio" name="комерция" value="да">
+                            <span>да</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="комерция" value="нет">
+                            <span>нет</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="submition_open-list">
+                <span>Оценка рыночной перспективы (импортоопережение, импортозамещение, соответствие технологическим трендам, новизна результата)</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="radio_container hidden">
+                    <div class="radion_container-padding">
+                        <label>
+                            <input type="radio" name="комерция" value="да">
+                            <span>да</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="комерция" value="нет">
+                            <span>нет</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="submition_open-list">
+                <span>Экспортный потенциал</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="radio_container hidden">
+                    <div class="radion_container-padding">
+                        <label>
+                            <input type="radio" name="комерция" value="да">
+                            <span>да</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="комерция" value="нет">
+                            <span>нет</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="submition_open-list">
+                <span>Требования к производству результата разработки</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="radio_container hidden">
+                    <div class="radion_container-padding">
+                        <label>
+                            <input type="radio" name="комерция" value="да">
+                            <span>да</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="комерция" value="нет">
+                            <span>нет</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="submition_open-list">
+                <span>Планируемый срок завершения разработки и выведения результата разработки на рынок с момента внесения данных о разработки</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="radio_container hidden">
+                    <div class="radion_container-padding">
+                        <label>
+                            <input type="radio" name="комерция" value="да">
+                            <span>да</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="комерция" value="нет">
+                            <span>нет</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="submition_open-list">
+                <span>Участие студентов/аспирантов в проекте</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="radio_container hidden">
+                    <div class="radion_container-padding">
+                        <label>
+                            <input type="radio" name="комерция" value="да">
+                            <span>да</span>
+                        </label>
+                        <label>
+                            <input type="radio" name="комерция" value="нет">
+                            <span>нет</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="submition_open-list">
+                <span>Предполагаемый формат представления проекта на Ярмарке разработок</span>
+                <span>Можно выбрать несколько вариантов</span>
+                <div class="form_input select_input"><span>Выбрать из списка</span></div>
+                <div class="animation_container hidden">
+                <div class="catalog_search">
+                    <div class="checkbox_container">
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="catalog_checkbox hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                        <label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label><label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label><label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label><label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label><label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label><label class="catalog_checkbox-label">
+                            <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                            <div class="checkbox_icon"></div>
+                            <span>Миндздраф РФ</span>
+                        </label>
+                    </div>
+                    <div class="catalog_button-container"><button type="button" class="find_button catalog_gray-button">Применить</button></div>
+                </div>
+                </div>
+            </div>
+            <span>Фамилия</span>
+            <input type="text" name="Surname" id="" class="form_input" placeholder="Иванов">
+            <span>Имя</span>
+            <input type="text" name="Name" id="" class="form_input" placeholder="Иван">
+            <span>Отчество</span>
+            <input type="text" name="Middle name" id="" class="form_input" placeholder="Иванович">
+            <span>E-mail</span>
+            <input type="email" name="Email" id="" class="form_input" placeholder="для связи">
+            <span>Телефон</span>
+            <input type="tel" name="Phone" id="" class="form_input" placeholder="для связи">
+
+            <div class="drag_zone">
+                <div>
+                    <button type="button" class="drag_zone-button">загрузить фото</button>
+                    <span>Или перетащите его сюда</span>
+                </div>
+            </div>
+
+            <label for="" class="file_input-label">
+                <input type="file" name="photo" class="hidden">
+                <span>PDF, DOC или EXCEL</span>
+            </label>
+            <label class="registration_form-checkbox">
+                <input type="checkbox" name="policy" id="" class="registration_checkbox hidden">
+                <div class="policy_checkbox"></div>
+                <span>Согласен с<a href="" class="policy_link">политикой конфиденциальности</a>  сайта</span>
+            </label>
+            <button type="submit" class="red_button">Подать проект</button>
+            </div>
+        </form>
+    </div>
+    <main class="profile_projects-main">
+       <div class="none_projects hidden">
+        <h2 class="none_projects-title">Пока нет поданных на конкурс проектов</h2>
+        <a href="#submition_form" data-fancybox class="red_button">Подать проект на конкурс</a>
+       </div>
+       <h2 class="profile_projects-title">Ваши заявки на поиск проектов</h2>
+       <section class="profile_projects">
+            <div class="filtr_container project_grid-container">
+                <span class="grid_left-item">Описание интересующего направления разработок</span>
+                <span class="filtr_container-aplication grid_left-item">Область применения</span>
+                <button class="filtr_container-date">Дата подачи</button>
+                <span class="filtr_container-status">Статус заявки</span>
+            </div>
+            <div class="project_container">
+                <div class="project_item project_grid-container application">
+                    <div class="grid_left-item pencil_container"><a href="" class="project_pencil-icon"></a> <h3 class="application_item-tittle">Лекарственное средство на основе ингибитора Ras-ГТФазы (К26К)</h3></div>
+                    <span class="project_item-aplication grid_left-item">Микробиология</span>
+                    <span class="project_item-date">23.11.24 / 15:45</span>
+                    <div class="project_item-status submitted application_status-submitted">
+                        <span>Подана</span>
+                        <div class="status_icon submitted_round"></div>
+                    </div>
+                </div>
+                <div class="project_item project_grid-container application">
+                    <div class="grid_left-item pencil_container"><a href="" class="project_pencil-icon"></a> <h3 class="application_item-title">Лекарственное средство на основе ингибитора</h3></div>
+                    <span class="project_item-aplication grid_left-item">Фармокология</span>
+                    <span class="project_item-date">23.11.24 / 15:45</span>
+                    <div class="project_item-status approved application_status-approved">
+                        <span>Одобрена</span>
+                        <div class="status_icon approved_round application_approved-round"></div>
+                    </div>
+                </div>
+                <div class="project_item project_grid-container application">
+                    <div class="grid_left-item pencil_container"><a href="" class="project_pencil-icon"></a> <h3 class="application_item-title">Лекарственное средство на основе ингибитора</h3></div>
+                    <span class="project_item-aplication grid_left-item">Фармокология</span>
+                    <span class="project_item-date">23.11.24 / 15:45</span>
+                    <div class="project_item-status rejected application_status-rejected">
+                        <span>Отклонена</span>
+                        <div class="status_icon rejected_round"></div>
+                    </div>
+                </div>
+            </div>
+       </section>
+    </main>
+</body>
+<script src=""></script>
+</html>

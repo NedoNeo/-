@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=47ecfe23-f9b4-4b57-9354-df32f2cb0e8e&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Подключение FancyBox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <!-- Подключение FancyBox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header catalog_header">
+        <div class="wrapper">
+            <div class="top_wrapper">
+                    <a href="" class="logo_link">
+                        <img src="img/SVG-icons/Logo_black.svg" alt="" class="logo">
+                    </a>
+                    <nuv class="nuv">
+                        <span class="burger"></span>
+                        <ul class="nuv_list">
+                            <li class="nuv_list-item"><a href="index.html" class="nuv_link">Главная</a></li>
+                            <li class="nuv_list-item"><a href="" class="nuv_link">Программа</a></li>
+                            <li class="nuv_list-item"><a href="catalog.html" class="nuv_link">Каталог разработок</a></li>
+                            <li class="nuv_list-item"><a href="partners.html" class="nuv_link selected">Индустриальные партнеры</a></li>
+                            <li class="nuv_list-item"><a href="" class="nuv_link">Конкурс</a></li>
+                            <li class="nuv_list-item"><a href="" class="nuv_link">Участникам</a></li>
+                            <li class="nuv_list-item"><a href="contacts.html" class="nuv_link">Контакты</a></li>
+                        </ul>
+                    </nuv>
+                <a href="#entry_form" data-fancybox class="entry_button">вход</a>
+            </div>
+            <div class="top_title-container">
+                <h1 class="catalog_title">Индустриальные партнеры</h1>
+                <div class="catalog_elipse-container"></div>
+            </div>
+            <a href="#project_selection" data-fancybox class="red_button catalog_bring-button">Подобрать проект</a>
+        </div>
+        
+    </header>
+    <div class="pop-ups">
+        <div class="pop-up project_description" id="descriprion">
+            <div class="project_flex-container">
+            <div class="project_title-container">
+                <span class="project_direction">Микробиология</span>
+                <h2 class="project_title project_pop-up-title">Лекарственное средство на основе ингибитора Ras-ГТФазы (К26К)</h2>
+            <p class="project_description-author">
+                ФГБУ «Российский научный центр рентгенорадиологии» Минздрава России
+            </p>
+            </div>
+                <p>
+                    В соответствии с п. 2.1.17 паспорта федерального проекта «Медицинская наука для человека» предусмотрено проведение Пилотного патентного аукциона. В целях диверсификации формы и направления сотрудничества разработчиков и производителей, а также определения их развития на долгосрочную перспективу, Пилотный патентный аукцион проводится в рамках Ярмарки продуктовых разработок в сфере медицины и здравоохранения.
+                </p>
+                <p>
+                    В соответствии с п. 2.1.17 паспорта федерального проекта «Медицинская наука для человека» предусмотрено проведение Пилотного патентного аукциона. В целях диверсификации формы и направления сотрудничества разработчиков и производителей, а также определения их развития на долгосрочную перспективу, Пилотный патентный аукцион проводится в рамках Ярмарки продуктовых разработок в сфере медицины и здравоохранения.
+                </p>
+                <img src="img/project_pop-up-img.png" alt="" class="project_description-image">
+                <p>
+                    В соответствии с п. 2.1.17 паспорта федерального проекта «Медицинская наука для человека» предусмотрено проведение Пилотного патентного аукциона. В целях диверсификации формы и направления сотрудничества разработчиков и производителей, а также определения их развития на долгосрочную перспективу, Пилотный патентный аукцион проводится в рамках Ярмарки продуктовых разработок в сфере медицины и здравоохранения.
+                </p>
+                <p>
+                    В соответствии с п. 2.1.17 паспорта федерального проекта «Медицинская наука для человека» предусмотрено проведение Пилотного патентного аукциона. В целях диверсификации формы и направления сотрудничества разработчиков и производителей, а также определения их развития на долгосрочную перспективу, Пилотный патентный аукцион проводится в рамках Ярмарки продуктовых разработок в сфере медицины и здравоохранения.
+                </p>
+            </div>
+            <a href="#appointment"  data-fancybox  class="red_button button_pop-up">Назначить встречу</a>
+        </div>
+        <form class="pop-up project_appointment-form" id="appointment">
+            <h2 class="form-title">Назначить встречу</h2>
+            <p class="form_paragraphe">Оставьте заявку и контактное лицо по проекту получит уведомление о встрече</p>
+            <input type="text" name="Organization name: " placeholder="Организация" class="form_input">
+            <textarea name="meeting description" id="" placeholder="Предмет встречи кратко" class="form_input form_textarea"></textarea>
+            <div class="datetime-container ">
+             <label for="25" class="form_input datetime-label">
+                <span class="datetime-label_text">Выберите дату и время</span> 
+             </label>
+             <input type="datetime-local" name="datetime" id="25" class="datetime-input">
+            </div>
+            <button type="submit" class="project_form-button red_button">Назначить встречу</button>
+            <p class="policy">Нажимая на кнопку, вы соглашаетесь <br>с <a href="" class="policy_link">политикой конфиденциальности</a> сайта</p>
+        </form>
+        <div class="pop-up allert" id="allert">
+            <h2 class="form-title allert_title">Необходима авторизация</h2>
+            <a href="#entry_form" data-fancybox class="red_button allert_enter-button">Войти</a>
+            <a href="#registration_form" data-fancybox class="catalog_gray-button allert_registr-button">Зарегистрироваться</a>
+        </div>
+        <form action="" class="pop-up entry_form" id="entry_form">
+            <h2 class="form-title entry_form-title">Вход</h2>
+            <input type="email" name="Email" id="" class="form_input" placeholder="E-mail">
+            <div class="password_wrapper">
+                <input type="password" name="password" id="" class="form_input password_input" placeholder="Пароль">
+                <span class="password_icon"></span>
+            </div>
+            <button type="submit" class="red_button entry_form-button">войти</button>
+            <a href="#registration_form" data-fancybox class="catalog_gray-button allert_registr-button">Зарегистрироваться</a>
+        </form>
+        <form action="" class="pop-up registration_form" id="registration_form">
+            <h2 class="form-title">Регистрация</h2>
+            <input type="text" class="form_input" name="surname" placeholder="Фамилия">
+            <input type="text" class="form_input" name="name" placeholder="Имя">
+            <input type="text" class="form_input" name="middle name" placeholder="Отчество">
+            <input type="text" class="form_input" name="Organization" placeholder="Организация">
+            <input type="text" class="form_input" name="post" placeholder="Должность">
+            <input type="email" name="Email" id="" class="form_input" placeholder="E-mail">
+            <div class="password_wrapper">
+                <input type="password" name="password" id="" class="form_input password_input" placeholder="Пароль">
+                <span class="password_icon"></span>
+            </div>
+            <div class="password_wrapper">
+                <input type="password" name="password" id="" class="form_input password_input" placeholder="Подтвердите пароль">
+                <span class="password_icon"></span>
+            </div>
+            <label class="registration_form-checkbox">
+                <input type="checkbox" name="policy" id="" class="registration_checkbox hidden">
+                <div class="policy_checkbox"></div>
+                <span>Согласен с<a href="" class="policy_link">политикой конфиденциальности</a>  сайта</span>
+            </label>
+            <button type="submit" class="red_button registration_submit">Зарегистрироваться</button>
+            <a href="#entry_form" data-fancybox class="catalog_gray-button registration_enter">войти</a>
+        </form>
+        <div class="pop-up confirmation" id="confirmation">
+            <h2 class="form-title">Для подтверждения регистрации перейдите по ссылке в письме</h2>
+            <p>Письмо отправлено на ekaterinodar123@gmail.com</p>
+            <button type="button" class="red_button confirmation_button">Отлично</button>
+            <a href="#entry_form" data-fancybox class="catalog_gray-button">войти</a>
+        </div>
+        <form action="" class="pop-up project_selection" id="project_selection">
+            <h2 class="form-title project_selection">Разместить заявку на подбор проекта</h2>
+            <p class="project_selection">Заполните информацию и критерии по интересующим проектам</p>
+            <input type="text" class="form_input" name="область применения" placeholder="Область применения">
+            <input type="text" class="form_input" name="Организация-разработчик" placeholder="Организация-разработчик">
+            <label for="" class="file_input-label">
+                <input type="file" name="photo" class="hidden">
+                <span>PDF, DOC или EXCEL</span>
+            </label>
+            <label class="registration_form-checkbox">
+                <input type="checkbox" name="policy" id="" class="registration_checkbox hidden">
+                <div class="policy_checkbox"></div>
+                <span>Согласен с<a href="" class="policy_link">политикой конфиденциальности</a>  сайта</span>
+            </label>
+            <button type="submit" class="red_button project_selection-button">Подобрать проект</button>
+        </form>
+    </div>
+    <main class="catalog_main wrapper">
+        <div class="catalog_title-container">
+            <span class="project-quantity">563 разработки в каталоге</span>
+            <div class="catalog_search-container">
+                <button type="button" class="search_button catalog_application-button">Область применения</button>
+                <button type="button" class="search_button developer_button">Организация-разработчик</button>
+                
+                <div class="animation_container search  hidden">
+                    <form class="catalog_search">
+                        <div class="catalog_container"><input type="search" name="" id="" class="catalog_search-input" placeholder="Поиск по организациям" spellcheck="false"></div>
+                        <div class="checkbox_container">
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="catalog_checkbox hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                            <label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label><label class="catalog_checkbox-label">
+                                <input type="checkbox" name="Миндздраф РФ" id="" class="checkbox_logic hidden">
+                                <div class="checkbox_icon"></div>
+                                <span>Миндздраф РФ</span>
+                            </label>
+                        </div>
+                        <div class="catalog_button-container"><button type="submit" class="find_button catalog_gray-button">Применить</button></div>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        <section class="section_project">
+            <div class="project_container">
+                <article class="project">
+                    <div class="project_title-container">
+                        <span class="project_direction">Микробиология</span>
+                        <h2 class="project_title">Лекарственное средство на основе ингибитора Ras-ГТФазы (К26К)</h2>
+                    <p class="project_author">
+                        ФГБУ «Российский научный центр рентгенорадиологии» Минздрава России
+                    </p>
+                    </div>
+                   
+                    <a href="#appointment" data-fancybox class="project_appointment-button catalog_gray-button">Назначить встречу</a>
+                    <a href="#descriprion" data-fancybox  class="project_more-button red_button">Подробнее</a>
+                </article>
+            </div>
+            <button type="button" class="more_button catalog-more_button">Показать еще</button>
+        </section>
+    </main>
+    <footer class="footer wrapper">
+        <form action="" class="question_form">
+            <h2 class="sub_title">Остались вопросы?</h2>
+            <input type="text" name="имя: " class="form_input" placeholder="Имя">
+            <input type="email" name="email: " id="" class="form_input" placeholder="Email">
+            <textarea name="вопрос: " id="" class="form_input form_textarea" placeholder="Ваш вопрос"></textarea>
+            <button type="submit" class="red_button main_button question_button">Отправить вопрос</button>
+            <p class="policy">Нажимая на кнопку, вы соглашаетесь <br>с <a href="" class="policy_link">политикой конфиденциальности</a> сайта</p>
+            <address class="contacts">
+                <div class="blue_container">
+                    <a href="mailto:medevent@expmed.ru">medevent@expmed.ru</a>
+                    <a href="tel:+7 (926) 924-81-17">+7 (926) 924-81-17</a>
+                    <a href="">Политика конфиденциальности</a>
+                </div>
+                <a href="" class="telegramm"></a>
+            </address>
+        </form>
+        <div class="" id="test">
+            
+        </div>
+    </footer>
+    <script src="partners.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('[data-fancybox]').fancybox({
+                // Настройки FancyBox
+                buttons: [
+                    "zoom",
+                    "close"
+                ] ,
+            });
+        });
+    </script>
+</body>
+</html>
