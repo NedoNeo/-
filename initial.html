@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=47ecfe23-f9b4-4b57-9354-df32f2cb0e8e&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Подключение FancyBox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+    <!-- Подключение FancyBox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -17,12 +25,12 @@
                     <nuv class="nuv">
                         <span class="burger"></span>
                         <ul class="nuv_list">
-                            <li class="nuv_list-item selected"><a href="index.html" class="nuv_link">Главная</a></li>
-                            <li class="nuv_list-item"><a href="" class="nuv_link">Программа</a></li>
+                            <li class="nuv_list-item selected"><a href="initial.html" class="nuv_link">Главная</a></li>
+                            <li class="nuv_list-item"><a href="program.html" class="nuv_link">Программа</a></li>
                             <li class="nuv_list-item"><a href="catalog.html" class="nuv_link">Каталог разработок</a></li>
                             <li class="nuv_list-item"><a href="partners.html" class="nuv_link">Индустриальные партнеры</a></li>
-                            <li class="nuv_list-item"><a href="" class="nuv_link">Конкурс</a></li>
-                            <li class="nuv_list-item"><a href="" class="nuv_link">Участникам</a></li>
+                            <li class="nuv_list-item"><a href="competition.html" class="nuv_link">Конкурс</a></li>
+                            <li class="nuv_list-item"><a href="patisipants.html" class="nuv_link">Участникам</a></li>
                             <li class="nuv_list-item"><a href="contacts.html" class="nuv_link">Контакты</a></li>
                             <li class="mobile_nuv-list">
                                 <address class="mobile_address">
@@ -44,7 +52,7 @@
             <div class="flex_container wrapper">
                 <h1 class="main_title">Ярмарка разработок</h1>
                 <div class="sub_container">
-                    <button type="button" class="registration_button">Зарегистрироваться</button>
+                    <a href="#bottom-body-form" type="button" class="registration_button">Зарегистрироваться</a>
                     <div class="date_grid-container">
                         <div class="column_one">
                             <span class="numbers">25-26</span>
@@ -66,6 +74,116 @@
             </div>
         </div>
     </header>
+    <div class="pop-ups">
+        <form action="" class="pop-up entry_form" id="entry_form">
+          <h2 class="form-title entry_form-title">Вход</h2>
+          <input
+            type="email"
+            name="Email"
+            id=""
+            class="form_input"
+            placeholder="E-mail"
+          />
+          <div class="password_wrapper">
+            <input
+              type="password"
+              name="password"
+              id=""
+              class="form_input password_input"
+              placeholder="Пароль"
+            />
+            <span class="password_icon"></span>
+          </div>
+          <button type="submit" class="red_button entry_form-button">
+            войти
+          </button>
+          <a
+            href="#registration_form"
+            data-fancybox
+            class="catalog_gray-button allert_registr-button"
+            >Зарегистрироваться</a
+          >
+        </form>
+        <form action="" class="pop-up registration_form" id="registration_form">
+          <h2 class="form-title">Регистрация</h2>
+          <input
+            type="text"
+            class="form_input"
+            name="surname"
+            placeholder="Фамилия"
+          />
+          <input type="text" class="form_input" name="name" placeholder="Имя" />
+          <input
+            type="text"
+            class="form_input"
+            name="middle name"
+            placeholder="Отчество"
+          />
+          <input
+            type="text"
+            class="form_input"
+            name="Organization"
+            placeholder="Организация"
+          />
+          <input
+            type="text"
+            class="form_input"
+            name="post"
+            placeholder="Должность"
+          />
+          <input
+            type="email"
+            name="Email"
+            id=""
+            class="form_input"
+            placeholder="E-mail"
+          />
+          <div class="password_wrapper">
+            <input
+              type="password"
+              name="password"
+              id=""
+              class="form_input password_input"
+              placeholder="Пароль"
+            />
+            <span class="password_icon"></span>
+          </div>
+          <div class="password_wrapper">
+            <input
+              type="password"
+              name="password"
+              id=""
+              class="form_input password_input"
+              placeholder="Подтвердите пароль"
+            />
+            <span class="password_icon"></span>
+          </div>
+          <label class="registration_form-checkbox">
+            <input
+              type="checkbox"
+              name="policy"
+              id=""
+              class="registration_checkbox hidden"
+            />
+            <div class="policy_checkbox"></div>
+            <span
+              >Согласен с<a href="" class="policy_link"
+                >политикой конфиденциальности</a
+              >
+              сайта</span
+            >
+          </label>
+          <button type="submit" class="red_button registration_submit">
+            Зарегистрироваться
+          </button>
+          <a
+            href="#entry_form"
+            data-fancybox
+            class="catalog_gray-button registration_enter"
+            >войти</a
+          >
+        </form>
+      </div>
     <main class="main">
         <section class="about wrapper">
             <h2 class="about_title">Ярмарка продуктовых разработок в сфере медицины и здравоохранения. Уникальное отраслевое событие</h2>
@@ -110,7 +228,7 @@
             <h2 class="sub_title">Программа мероприятия</h2>
             <div class="program_flex-container">
             <div class="program_container">
-                <div class="date_container red">
+                <div class="date_container red not-change">
                     <span>25 ноября</span>
                     <span>Зал «Ладога»</span>
                 </div>
@@ -264,6 +382,7 @@
                     <p class="name">Михаил Альбертович Мурашко</p>
                     <p class="grade">Министр здравоохранения РФ</p>
                 <figcaption>
+                    
                </figure> 
                <figure class="guests_item">
                 <img src="img/Cosenco.png" alt="Валентина Владимировна Косенко" class="guests_item-image">
@@ -387,6 +506,7 @@
             </div>
         </section>
     </main>
+    <div id="bottom-body-form"></div>
     <footer class="footer wrapper">
         <form action="" class="question_form">
             <h2 class="sub_title">Остались вопросы?</h2>
@@ -408,5 +528,5 @@
             
         </div>
     </footer>
-    <script src="index.js"></script>
+    <script src="js/index.js"></script>
 </body>

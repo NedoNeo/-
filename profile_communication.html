@@ -21,16 +21,16 @@
                     <nuv class="nuv">
                         <span class="burger"></span>
                         <ul class="nuv_list">
-                            <li class="nuv_list-item"><a href="index.html" class="nuv_link">Главная</a></li>
-                            <li class="nuv_list-item"><a href="" class="nuv_link">Программа</a></li>
+                            <li class="nuv_list-item"><a href="initial.html" class="nuv_link">Главная</a></li>
+                            <li class="nuv_list-item"><a href="program.html" class="nuv_link">Программа</a></li>
                             <li class="nuv_list-item"><a href="catalog.html" class="nuv_link">Каталог разработок</a></li>
                             <li class="nuv_list-item"><a href="partners.html" class="nuv_link">Индустриальные партнеры</a></li>
-                            <li class="nuv_list-item"><a href="" class="nuv_link">Конкурс</a></li>
-                            <li class="nuv_list-item"><a href="" class="nuv_link">Участникам</a></li>
+                            <li class="nuv_list-item"><a href="competition.html" class="nuv_link">Конкурс</a></li>
+                            <li class="nuv_list-item"><a href="patisipants.html" class="nuv_link">Участникам</a></li>
                             <li class="nuv_list-item"><a href="contacts.html" class="nuv_link">Контакты</a></li>
                         </ul>
                     </nuv>
-                <a href="profile.html" class="entry_button authorized"><img src="img/entry_image.png" alt="" class="profile_entry-image"> <span>Виталий К</span></a>
+                <a href="profile.html" class="entry_button authorized"><img src="img/entry_image.png" alt="image" class="profile_entry-image"> <span>Виталий К</span></a>
             </div>
             <div class="top_title-container">
                 <div class="profile_owner">
@@ -569,14 +569,14 @@
             </div>
         </form>
     </div>
-    <main class="wrapper">
+    <main class="wrapper communicate-box">
         <h2 class="profile_communication-title">Заявки на деловое общение</h2>
         <div class="communication_button-container">
-            <button type="button" class="red_button incoming_button">входящие</button>
-            <button type="button" class="not_selected-button outgoing_button">исходящие</button>
+            <div class="btn-box"><button type="button" class="red_button incoming_button">входящие</button>
+                <button type="button" class="not_selected-button outgoing_button">исходящие</button></div>
             <a href="" download="" class="download_link">Памятка</a>
         </div>
-        <section class="section_incoming hidden">
+        <section class="section_incoming ">
             <article class="message new_message">
                 <div>
                     <span>От кого</span>
@@ -652,7 +652,7 @@
                 </div>
             </article>
         </section>
-        <section class="section_outcoming">
+        <section class="section_outcoming hidden">
             <div class="filtr_container project_grid-container">
                 <span class="grid_left-item">Проект</span>
                 <span class="filtr_container-aplication">Дата встречи</span>
@@ -661,34 +661,81 @@
             </div>
             <div class="project_container">
                 <div class="project_item project_grid-container communication_request">
-                    <div class="grid_left-item pencil_container"><a href="" class="project_pencil-icon"></a> <h3 class="application_item-tittle">Лекарственное средство на основе ингибитора Ras-ГТФазы (К26К)</h3></div>
-                    <span class="communication_date">23.11.24 / 15:45</span>
-                    <span class="project_item-date">23.11.24 / 15:45</span>
-                    <div class="project_item-status submitted application_status-submitted">
+                    <div class="grid_left-item pencil_container ffirst"><a href="#edit_form" data-fancybox
+                        class="project_pencil-icon hide-top"></a> <h3 class="application_item-tittle ssecond">Лекарственное средство на основе ингибитора Ras-ГТФазы (К26К)</h3></div>
+                        <span class="project_item-aplication grid_left-item show-bottom"
+              >Микробиология</span
+            >                    <span class="tthird show-bottom tthird">Дата встречи</span>
+
+                    <span class="communication_date fforth">23.11.24 / 15:45</span>
+                    <span class="tthird show-bottom four">Дата подачи</span>
+
+                    <span class="project_item-date  fforth five">23.11.24 / 15:45</span>
+                    <div class="project_item-status submitted application_status-submitted ffforth">
                         <span>Подана</span>
                         <div class="status_icon submitted_round"></div>
                     </div>
+                    <a
+                    href="#edit_form"
+                    data-fancybox
+                    class="project_pencil-icon show-bottom ffifth fffifth button"
+                    >Редактировать</a
+                  >
                 </div>
                 <div class="project_item project_grid-container communication_request">
-                    <div class="grid_left-item pencil_container"><a href="" class="project_pencil-icon"></a> <h3 class="application_item-title">Лекарственное средство на основе ингибитора</h3></div>
-                    <span class="communication_date">23.11.24 / 15:45</span>
-                    <span class="project_item-date">23.11.24 / 15:45</span>
-                    <div class="project_item-status approved application_status-approved">
+                    <div class="grid_left-item pencil_container ffirst"> <a
+                        href="#edit_form"
+                        data-fancybox
+                        class="project_pencil-icon hide-top "
+                        ></a
+                      > <h3 class="application_item-title ssecond">Лекарственное средство на основе ингибитора</h3></div>
+                      <span class="project_item-aplication grid_left-item show-bottom"
+              >Микробиология</span
+            >
+                    <span class="tthird show-bottom tthird">Дата встречи</span>
+
+                    <span class="communication_date fforth">23.11.24 / 15:45</span>
+                    <span class="tthird show-bottom four">Дата подачи</span>
+
+                    <span class="project_item-date fforth five">23.11.24 / 15:45</span>
+                    <div class="project_item-status approved application_status-approved ffforth">
                         <span>Одобрена</span>
                         <div class="status_icon approved_round"></div>
                     </div>
+                    <a
+              href="#edit_form"
+              data-fancybox
+              class="project_pencil-icon show-bottom ffifth fffifth button"
+              >Редактировать</a
+            >
                 </div>
                 <div class="project_item project_grid-container communication_request">
-                    <div class="grid_left-item pencil_container"><a href="" class="project_pencil-icon"></a> <h3 class="application_item-title">Лекарственное средство на основе ингибитора</h3></div>
-                    <span class="communication_date">23.11.24 / 15:45</span>
-                    <span class="project_item-date">23.11.24 / 15:45</span>
-                    <div class="project_item-status rejected application_status-rejected">
+                    <div class="grid_left-item pencil_container ffirst"><a href="#edit_form" data-fancybox
+                        class="project_pencil-icon hide-top"></a> <h3 class="application_item-tittle ssecond">Лекарственное средство на основе ингибитора Ras-ГТФазы (К26К)</h3></div>
+                        <span class="project_item-aplication grid_left-item show-bottom"
+              >Микробиология</span
+            >                    <span class="tthird show-bottom tthird">Дата встречи</span>
+
+                    <span class="communication_date fforth">23.11.24 / 15:45</span>
+                    <span class="tthird show-bottom four">Дата подачи</span>
+
+                    <span class="project_item-date  fforth five">23.11.24 / 15:45</span>
+                    <div class="project_item-status rejected application_status-rejected ffforth">
                         <span>Отклонена</span>
                         <div class="status_icon rejected_round"></div>
                     </div>
+                    <a
+                    href="#edit_form"
+                    data-fancybox
+                    class="project_pencil-icon show-bottom ffifth fffifth button"
+                    >Редактировать</a
+                  >
                 </div>
             </div>
         </section>
     </main>
+    <footer class="profile-projects-bottom">
+        <a href="profile.html" class="logout-bottom">Выйти</a>
+      </footer>
 </body>
 </html>

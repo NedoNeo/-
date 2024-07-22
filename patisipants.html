@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=47ecfe23-f9b4-4b57-9354-df32f2cb0e8e&lang=ru_RU"
+      type="text/javascript"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Подключение FancyBox CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+    <!-- Подключение FancyBox JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <title>Competition</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body partisipants competition-page">
+    <header class="header program">
+      <div class="wrapper">
+        <div class="top_wrapper">
+          <a href="" class="logo_link">
+            <img src="img/logo.svg" alt="" class="logo" />
+          </a>
+          <nuv class="nuv">
+            <span class="burger"></span>
+            <ul class="nuv_list">
+              <li class="nuv_list-item">
+                <a href="initial.html" class="nuv_link">Главная</a>
+              </li>
+              <li class="nuv_list-item">
+                <a href="program.html" class="nuv_link">Программа</a>
+              </li>
+              <li class="nuv_list-item">
+                <a href="catalog.html" class="nuv_link">Каталог разработок</a>
+              </li>
+              <li class="nuv_list-item">
+                <a href="partners.html" class="nuv_link"
+                  >Индустриальные партнеры</a
+                >
+              </li>
+              <li class="nuv_list-item">
+                <a href="competition.html" class="nuv_link">Конкурс</a>
+              </li>
+              <li class="nuv_list-item selected">
+                <a href="patisipants.html" class="nuv_link">Участникам</a>
+              </li>
+              <li class="nuv_list-item">
+                <a href="contacts.html" class="nuv_link">Контакты</a>
+              </li>
+              <li class="mobile_nuv-list">
+                <address class="mobile_address">
+                  <div class="mobile_address-container">
+                    <a href="mailto:medevent@expmed.ru" class="mobile_link"
+                      >medevent@expmed.ru</a
+                    >
+                    <a href="tel:+7 (926) 924-81-17" class="mobile_link"
+                      >+7 (926) 924-81-17</a
+                    >
+                  </div>
+                  <a href="" class="telegramm_mobile"></a>
+                </address>
+              </li>
+            </ul>
+          </nuv>
+          <a href="#entry_form" data-fancybox class="entry_button">вход</a>
+        </div>
+      </div>
+    </header>
+    <div class="pop-ups">
+      <form action="" class="pop-up entry_form" id="entry_form">
+        <h2 class="form-title entry_form-title">Вход</h2>
+        <input
+          type="email"
+          name="Email"
+          id=""
+          class="form_input"
+          placeholder="E-mail"
+        />
+        <div class="password_wrapper">
+          <input
+            type="password"
+            name="password"
+            id=""
+            class="form_input password_input"
+            placeholder="Пароль"
+          />
+          <span class="password_icon"></span>
+        </div>
+        <button type="submit" class="red_button entry_form-button">
+          войти
+        </button>
+        <a
+          href="#registration_form"
+          data-fancybox
+          class="catalog_gray-button allert_registr-button"
+          >Зарегистрироваться</a
+        >
+      </form>
+      <form action="" class="pop-up registration_form" id="registration_form">
+        <h2 class="form-title">Регистрация</h2>
+        <input
+          type="text"
+          class="form_input"
+          name="surname"
+          placeholder="Фамилия"
+        />
+        <input type="text" class="form_input" name="name" placeholder="Имя" />
+        <input
+          type="text"
+          class="form_input"
+          name="middle name"
+          placeholder="Отчество"
+        />
+        <input
+          type="text"
+          class="form_input"
+          name="Organization"
+          placeholder="Организация"
+        />
+        <input
+          type="text"
+          class="form_input"
+          name="post"
+          placeholder="Должность"
+        />
+        <input
+          type="email"
+          name="Email"
+          id=""
+          class="form_input"
+          placeholder="E-mail"
+        />
+        <div class="password_wrapper">
+          <input
+            type="password"
+            name="password"
+            id=""
+            class="form_input password_input"
+            placeholder="Пароль"
+          />
+          <span class="password_icon"></span>
+        </div>
+        <div class="password_wrapper">
+          <input
+            type="password"
+            name="password"
+            id=""
+            class="form_input password_input"
+            placeholder="Подтвердите пароль"
+          />
+          <span class="password_icon"></span>
+        </div>
+        <label class="registration_form-checkbox">
+          <input
+            type="checkbox"
+            name="policy"
+            id=""
+            class="registration_checkbox hidden"
+          />
+          <div class="policy_checkbox"></div>
+          <span
+            >Согласен с<a href="" class="policy_link"
+              >политикой конфиденциальности</a
+            >
+            сайта</span
+          >
+        </label>
+        <button type="submit" class="red_button registration_submit">
+          Зарегистрироваться
+        </button>
+        <a
+          href="#entry_form"
+          data-fancybox
+          class="catalog_gray-button registration_enter"
+          >войти</a
+        >
+      </form>
+    </div>
+    <main>
+      <div class="wrapper">
+        <section class="top">
+          <h1>Информация для участников</h1>
+<ul class="partisipants-btns">
+  <li>          <a href="#bottom-form" class="button red not-change first">Зарегистрироваться</a>
+  </li>
+</ul>
+        </section>
+        <section class="middle">
+          <h2>Формат участия</h2>
+          <div class="middle__list">
+            <li class="middle__list-item">
+              <h3>Слушатель</h3>
+              <p class="middle__text">Лицо, принимающее участие в деловой программе Ярмарки разработок (за исключением мероприятий по специальным приглашениям)</p>
+            </li>
+            <li class="middle__list-item">
+              <h3>Разработчик</h3>
+              <p class="middle__text">Лицо, заявившее проект на конкурс Ярмарки разработок для поиска потенциального партнера</p>
+            </li>
+            <li class="middle__list-item">
+              <h3>Индустриальный партнер</h3>
+              <p class="middle__text">Представитель производства медицинской продукции, заинтересованный в поиске новых разработок</p>
+            </li>
+            <li class="middle__list-item">
+              <h3>Пресса</h3>
+              <p class="middle__text">представитель органов публичной передачи информации с помощью технических средств</p>
+            </li>
+            <li class="middle__list-item">
+              <h3>Организатор</h3>
+              <p class="middle__text">Лицо, осуществляющее координацию мероприятия</p>
+            </li>
+          </div>
+        </section>
+        <section class="quote">
+          <h2 class="quote__title">В рамках мероприятия проводится конкурс проектов, получивших экономический эффект по итогам года, в целях продвижения результатов интеллектуальной деятельности российских изобретателей</h2>
+          <ul class="competition__buttons quote__buttons">
+           
+            <li class="button red quote-btn not-change"><a href="#" >Подать проект на конкурс</a></li>
+            <li class="quote-btn button white"><a href="#">Подробнее о конкурсе</a>
+            </li>
+          </ul>
+        </section>
+        <section class="articles">
+          <h2 class="articles__title">Требования к представлению проектов</h2>
+          <div class="articles__container">
+            <article class="articles__item">
+                <h3>Презентация</h3>
+              <span>Демонстрация в выставочной зоне на площадке мероприятия</span>
+              <ul class="articles__list">
+                <li>
+                  <h4>Шаблон презентации </h4>
+                  <a href="path/to/your/template.zip" download="шаблон.zip" class="download-button button">Скачать шаблон</a>
+                </li>
+                <li>Формат .pdf (предпочтительно) или .pptx </li>
+                <li>Срок представления презентации с указанием контактных данных ответственного сотрудника — 08 ноября</li>
+                <li>Отправлять на e-mail координатора — <a href="mailto:medevent@expmed.ru" class="mail">medevent@expmed.ru</a></li>
+              </ul>
+            </article>
+            <article class="articles__item">
+              <h3>Видео-ролик</h3>
+              <span>Демонстрация на площадке мероприятия</span>
+              <ul class="articles__list">
+                <li>
+                  Формат .mp4
+                </li>
+                <li>Длительность не более 5 минут</li>
+                <li>Срок представления видео-ролика с указанием контактных данных ответственного сотрудника  — 08 ноября</li>
+                <li>Отправлять на e-mail координатора — <a href="mailto:medevent@expmed.ru" class="mail">medevent@expmed.ru</a></li>
+              </ul>
+            </article>
+            <article class="articles__item">
+              <h3>Экспонат</h3>
+              <span>Демонстрация на площадке мероприятия</span>
+              <ul class="articles__list">
+                <li>Завоз экспонатов на площадку Ярмарки разработок — 24 ноября с 16:00 до 19:00</li>
+                <li>Срок представления данных по габаритам и весу экспонатов с указанием контактных данных ответственного сотрудника  — 08 ноября</li>
+                <li>Отправлять на e-mail координатора — <a href="mailto:medevent@expmed.ru" class="mail">medevent@expmed.ru</a></li>
+              </ul>
+            </article>
+          </div>
+        </section>
+        <section class="route">
+          <div class="route__title-box">
+            <h2 class="route__title">Рассказываем как добраться</h2>
+          </div>
+          <div class="route__container">
+            <ul class="route__container-list">
+              <li class="route__list-item">
+               <div class="route__list-item--top">
+                <h3>На автомобиле</h3>
+                <div class="christ">
+                  <svg class="christs" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="background" width="34" height="34" rx="17" transform="matrix(-1 0 0 1 34 0)" fill="#F2F2F2"/>
+                    <g clip-path="url(#clip0_58_1441)">
+                        <path class="cross" d="M18.0609 17.0001L21.7734 20.7126L20.7129 21.7731L17.0004 18.0606L13.2879 21.7731L12.2274 20.7126L15.9399 17.0001L12.2274 13.2876L13.2879 12.2271L17.0004 15.9396L20.7129 12.2271L21.7734 13.2876L18.0609 17.0001Z" fill="#0E1132"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_58_1441">
+                            <rect width="18" height="18" fill="white" transform="translate(8 8)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                </div>
+              </div>
+                <div class="rout__list-item--content">
+                  <p>На территории ЦМТ предусмотрена платная парковка 300 ₽/час.<br> Первые 15 мин — бесплатно</p>
+                <ul class="route__container-inner">
+                  <li>
+                    <header><div class="route-map">map here</div>
+                      <h3>С ул. Мантулинской </h3>
+                      <span>Заезд через шлагбаум, вход через 7 подъезд</span></header>
+                    <a href="#" class="button route__button ">Открыть  карты</a>
+                  </li>
+                  <li>
+                    <header><div class="route-map">map here</div>
+                      <h3>С наб. Краснопреснеской </h3>
+                      <span>Заезд через шлагбаум, объезд здания с левой<br> стороны, вход через 7 подъезд</span></header>
+                    <a href="#" class="button route__button ">Открыть  карты</a>
+                  </li>
+                </ul>
+                </div>
+              </li>
+              <li class="route__list-item">
+                <div class="route__list-item--top">
+                 <div class="route__description">
+                  <h3>От м. «Улица 1905 года»</h3>
+                  <span>15-20 мин</span>
+                 </div>
+                 <div class="christ">
+                  <svg class="christs" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="background" width="34" height="34" rx="17" transform="matrix(-1 0 0 1 34 0)" fill="#F2F2F2"/>
+                    <g clip-path="url(#clip0_58_1441)">
+                        <path class="cross" d="M18.0609 17.0001L21.7734 20.7126L20.7129 21.7731L17.0004 18.0606L13.2879 21.7731L12.2274 20.7126L15.9399 17.0001L12.2274 13.2876L13.2879 12.2271L17.0004 15.9396L20.7129 12.2271L21.7734 13.2876L18.0609 17.0001Z" fill="#0E1132"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_58_1441">
+                            <rect width="18" height="18" fill="white" transform="translate(8 8)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                 </div>
+               </div>
+                 <div class="rout__list-item--content">
+                   <p>На территории ЦМТ предусмотрена платная парковка 300 ₽/час.<br> Первые 15 мин — бесплатно</p>
+                 <ul class="route__container-inner">
+                   <li>
+                     <div class="route-map">map here</div>
+
+                     <h3>С ул. Мантулинской </h3>
+                     <span>Заезд через шлагбаум, вход через 7 подъезд</span>
+                     <a href="#" class="button route__button ">Открыть  карты</a>
+                   </li>
+                   <li>
+                     <div class="route-map">map here</div>
+
+                     <h3>С наб. Краснопреснеской </h3>
+                     <span>Заезд через шлагбаум, объезд здания с левой<br> стороны, вход через 7 подъезд</span>
+                     <a href="#" class="button route__button ">Открыть  карты</a>
+                   </li>
+                 </ul>
+                 </div>
+               </li>
+               <li class="route__list-item">
+                <div class="route__list-item--top">
+                  <div class="route__description">
+                  <h3>От м. «Краснопресненская»</h3>
+                  <span>20-25 мин</span>
+                 </div>
+                 <div class="christ">
+                  <svg class="christs" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="background" width="34" height="34" rx="17" transform="matrix(-1 0 0 1 34 0)" fill="#F2F2F2"/>
+                    <g clip-path="url(#clip0_58_1441)">
+                        <path class="cross" d="M18.0609 17.0001L21.7734 20.7126L20.7129 21.7731L17.0004 18.0606L13.2879 21.7731L12.2274 20.7126L15.9399 17.0001L12.2274 13.2876L13.2879 12.2271L17.0004 15.9396L20.7129 12.2271L21.7734 13.2876L18.0609 17.0001Z" fill="#0E1132"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_58_1441">
+                            <rect width="18" height="18" fill="white" transform="translate(8 8)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                 </div>
+               </div>
+
+               </li>
+               <li class="route__list-item">
+                <div class="route__list-item--top">
+                  <div class="route__description">
+                  <h3>От м. «Выставочная» / м. «Деловой центр (БКЛ)»</h3>
+                  <span>15-20 мин</span>
+                 </div>
+                 <div class="christ">
+                  <svg class="christs" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="background" width="34" height="34" rx="17" transform="matrix(-1 0 0 1 34 0)" fill="#F2F2F2"/>
+                    <g clip-path="url(#clip0_58_1441)">
+                        <path class="cross" d="M18.0609 17.0001L21.7734 20.7126L20.7129 21.7731L17.0004 18.0606L13.2879 21.7731L12.2274 20.7126L15.9399 17.0001L12.2274 13.2876L13.2879 12.2271L17.0004 15.9396L20.7129 12.2271L21.7734 13.2876L18.0609 17.0001Z" fill="#0E1132"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_58_1441">
+                            <rect width="18" height="18" fill="white" transform="translate(8 8)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                 </div>
+               </div>
+
+               </li>
+               <li class="route__list-item">
+                <div class="route__list-item--top">
+                  <div class="route__description">
+                  <h3>От м. «Деловой центр (МЦК)»</h3>
+                  <span>20 мин</span>
+                 </div>
+                 <div class="christ">
+                  <svg class="christs" width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect class="background" width="34" height="34" rx="17" transform="matrix(-1 0 0 1 34 0)" fill="#F2F2F2"/>
+                    <g clip-path="url(#clip0_58_1441)">
+                        <path class="cross" d="M18.0609 17.0001L21.7734 20.7126L20.7129 21.7731L17.0004 18.0606L13.2879 21.7731L12.2274 20.7126L15.9399 17.0001L12.2274 13.2876L13.2879 12.2271L17.0004 15.9396L20.7129 12.2271L21.7734 13.2876L18.0609 17.0001Z" fill="#0E1132"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_58_1441">
+                            <rect width="18" height="18" fill="white" transform="translate(8 8)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
+                 </div>
+               </div>
+               <!-- <div class="rout__list-item--content">
+                <p>На территории ЦМТ предусмотрена платная парковка 300 ₽/час.<br> Первые 15 мин — бесплатно</p>
+              <ul class="route__container-inner">
+                <li>
+                  <div class="route-map">map here</div>
+
+                  <h3>С ул. Мантулинской </h3>
+                  <span>Заезд через шлагбаум, вход через 7 подъезд</span>
+                  <a href="#" class="button route__button">Открыть  карты</a>
+                </li>
+                <li>
+                  <div class="route-map">map here</div>
+
+                  <h3>С наб. Краснопреснеской </h3>
+                  <span>Заезд через шлагбаум, объезд здания с левой<br> стороны, вход через 7 подъезд</span>
+                  <a href="#" class="button route__button">Открыть  карты</a>
+                </li>
+              </ul>
+              </div> -->
+               </li>
+              
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div id="bottom-form"></div>
+    <footer class="footer wrapper">
+      <form action="" class="question_form">
+        <h2 class="sub_title">Остались вопросы?</h2>
+        <input type="text" name="имя: " class="form_input" placeholder="Имя" />
+        <input
+          type="email"
+          name="email: "
+          id=""
+          class="form_input"
+          placeholder="Email"
+        />
+        <textarea
+          name="вопрос: "
+          id=""
+          class="form_input form_textarea"
+          placeholder="Ваш вопрос"
+        ></textarea>
+        <button type="submit" class="red_button main_button question_button">
+          Отправить вопрос
+        </button>
+        <p class="policy">
+          Нажимая на кнопку, вы соглашаетесь <br />с
+          <a href="" class="policy_link">политикой конфиденциальности</a> сайта
+        </p>
+        <address class="contacts">
+          <div class="blue_container">
+            <a href="mailto:medevent@expmed.ru">medevent@expmed.ru</a>
+            <a href="tel:+7 (926) 924-81-17">+7 (926) 924-81-17</a>
+            <a href="">Политика конфиденциальности</a>
+          </div>
+          <a href="" class="telegramm"></a>
+        </address>
+      </form>
+      <div class="" id="map"></div>
+    </footer>
+    <script src="js/index.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("[data-fancybox]").fancybox({
+          // Настройки FancyBox
+          buttons: ["zoom", "close"],
+        });
+      });
+    </script>
+    <script src="js/partisipants.js"></script>
+  </body>
+</html>
