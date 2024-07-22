@@ -37,7 +37,6 @@ ymaps.ready(init);
 
         input.addEventListener('change', function() {
             const value = input.value;
-            console.log(value);
             label.querySelector(".datetime-label_text").textContent = value ? new Date(value).toLocaleString() : 'Выберите дату и время';
         });
 
@@ -102,23 +101,12 @@ ymaps.ready(init);
                 }
 
                 isAnimated = true
-                target.style.setProperty('--icon_rotate', "rotate(-90deg)")
+                
 
                 let nextElem = target.nextElementSibling;
-                let list = new selectList(nextElem);
+                let list = new selectList(nextElem, target);
 
-                if(nextElem.classList.contains('hidden')) {
-                    list.openList();
-                    setTimeout(() => {
-                        isAnimated = false;
-                    },900)
-                } else {
-                    setTimeout(() => {
-                        isAnimated = false;
-                    },900)
-                    list.closeList(900)
-                    target.style.setProperty('--icon_rotate', "rotate(90deg)")
-                }
+                list.change()
                 
             }
         })
@@ -149,3 +137,20 @@ ymaps.ready(init);
                 searchForm.previousElementSibling.style.setProperty('--icon_rotate', "rotate(90deg)")
             }
         })
+
+        const mobileForm = document.querySelector('.filter_mobile');
+
+mobileForm.addEventListener("click", (event) => {
+    if(event.target.closest('.filter_mobile-item')) {
+        if(isAnimated) {
+            return
+        }
+
+        isAnimated = true
+                
+
+        let mobileList = new selectList(event.target.closest('.filter_mobile-item').nextElementSibling, event.target.closest('.filter_mobile-item'));
+
+        mobileList.change()
+    }
+})

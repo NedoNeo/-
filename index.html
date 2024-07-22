@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=47ecfe23-f9b4-4b57-9354-df32f2cb0e8e&lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -41,7 +46,7 @@
             </div>
         </div>
         <div class="title_container">
-            <div class="flex_container wrapper">
+            <div class="wrapper">
                 <h1 class="main_title">Ярмарка разработок</h1>
                 <div class="sub_container">
                     <button type="button" class="registration_button">Зарегистрироваться</button>
@@ -99,16 +104,29 @@
                 </article>
             </div>
             <div class="about_slider">
-                <div class="previos"></div>
-                <div class="about_slider-item">
-
-                </div>
-            <div class="next"></div>
+                    <div class="about_slider-item">
+                        <div class="slider_elipse-container"></div>
+                        <p class="slider_text">«Новые открытия в области медицины, методы профилактики и лечения, новые лекарства и оборудование должны быть доступны людям и широко использоваться в первичном звене здравоохранения. Стоящие перед нами задачи не являются узковедомственными, они требуют участия представителей науки, отраслей экономики, таких, как химия и микроэлектроника. Принципиальное значение имеет консолидированная работа министерств, ведомств, регионов, компаний, и активное включение бизнеса (...) Поэтому по ключевым технологическим направлениям мы работаем в формате национальных проектов, их механизмы позволяют выстроить всю технологическую цепочку от фундаментальных заделов до средств производства и подготовки кадров высшей квалификации»</p>
+                        <span class="slider_text-author">В.В. Путин</span>
+                        <span>Источник: <a href="" class="link">Президент России</a></span>
+                    </div>
+                    <div class="about_slider-item">
+                        <div class="slider_elipse-container"></div>
+                        <p class="slider_text">«Новые открытия в области медицины, методы профилактики и лечения, новые лекарства и оборудование должны быть доступны людям и широко использоваться в первичном звене здравоохранения. Стоящие перед нами задачи не являются узковедомственными, они требуют участия представителей науки, отраслей экономики, таких, как химия и микроэлектроника. Принципиальное значение имеет консолидированная работа министерств, ведомств, регионов, компаний, и активное включение бизнеса (...) Поэтому по ключевым технологическим направлениям мы работаем в формате национальных проектов, их механизмы позволяют выстроить всю технологическую цепочку от фундаментальных заделов до средств производства и подготовки кадров высшей квалификации»</p>
+                        <span class="slider_text-author">В.В. Путин</span>
+                        <span>Источник: <a href="" class="link">Президент России</a></span>
+                    </div>
+                    <div class="about_slider-item">
+                        <div class="slider_elipse-container"></div>
+                        <p class="slider_text">«Новые открытия в области медицины, методы профилактики и лечения, новые лекарства и оборудование должны быть доступны людям и широко использоваться в первичном звене здравоохранения. Стоящие перед нами задачи не являются узковедомственными, они требуют участия представителей науки, отраслей экономики, таких, как химия и микроэлектроника. Принципиальное значение имеет консолидированная работа министерств, ведомств, регионов, компаний, и активное включение бизнеса (...) Поэтому по ключевым технологическим направлениям мы работаем в формате национальных проектов, их механизмы позволяют выстроить всю технологическую цепочку от фундаментальных заделов до средств производства и подготовки кадров высшей квалификации»</p>
+                        <span class="slider_text-author">В.В. Путин</span>
+                        <span>Источник: <a href="" class="link">Президент России</a></span>
+                    </div>
             </div>
         </section>
         <section class="program wrapper">
             <h2 class="sub_title">Программа мероприятия</h2>
-            <div class="program_flex-container">
+            <div class="program_slider program_flex-container">
             <div class="program_container">
                 <div class="date_container red">
                     <span>25 ноября</span>
@@ -295,40 +313,28 @@
         <section class="developers wrapper">
             <div class="developers_title">
                 <h2 class="sub_title">Индустриальные партнеры</h2>
-                <div class="buttons_container">
-                    <button type="button" class="slider_button previos"></button>
-                    <button type="button" class="slider_button next"></button>
-                </div>
             </div>
             <div class="slider">
-                <div class="track">
                     <div class="slider_item developers_item"><img src="img/developer-1.png" alt="Medical Imagine" class="developers_image"></div>
                     <div class="slider_item developers_item"><img src="img/developer-2.png" alt="Центр Гематологии" class="developers_image"></div>
                     <div class="slider_item developers_item"><img src="img/developer-3.png" alt="Институт Биологии Гена" class="developers_image"></div>
                     <div class="slider_item developers_item"><img src="img/developer-4.png" alt="ИБХФ РАН" class="developers_image"></div>
                     <div class="slider_item developers_item"><img src="img/developer-5.png" alt="Курчатовский институт" class="developers_image"></div>
                     <div class="slider_item developers_item"><img src="img/developer-6.png" alt="МНТК микрохирургии глаза" class="developers_image"></div>
-                </div>
             </div>
             <button type="button" class="more_button">Все проекты</button>
         </section>
         <section class="partners wrapper">
             <div class="developers_title">
                 <h2 class="sub_title">Разработчики</h2>
-                <div class="buttons_container">
-                    <button type="button" class="slider_button previos"></button>
-                    <button type="button" class="slider_button next"></button>
-                </div>
             </div>
             <div class="slider">
-                <div class="track">
                     <div class="slider_item"><img src="img/developer-1.png" alt="Medical Imagine" class="developers_image"></div>
                     <div class="slider_item"><img src="img/developer-2.png" alt="Центр Гематологии" class="developers_image"></div>
                     <div class="slider_item"><img src="img/developer-3.png" alt="Институт Биологии Гена" class="developers_image"></div>
                     <div class="slider_item"><img src="img/developer-4.png" alt="ИБХФ РАН" class="developers_image"></div>
                     <div class="slider_item"><img src="img/developer-5.png" alt="Курчатовский институт" class="developers_image"></div>
                     <div class="slider_item"><img src="img/developer-6.png" alt="МНТК микрохирургии глаза" class="developers_image"></div>
-                </div>
             </div>
             <button type="button" class="more_button">Индустриальные партнеры</button>
         </section>
@@ -370,20 +376,14 @@
         <section class="last_year-galary wrapper">
             <div class="developers_title">
                 <h2 class="sub_title">Ярмарка Разработок 2023</h2>
-                <div class="buttons_container">
-                    <button type="button" class="slider_button previos"></button>
-                    <button type="button" class="slider_button next"></button>
-                </div>
             </div>
             <div class="slider last_year-slider">
-                <div class="track">
-                    <div class="slider_item"><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
-                    <div class="slider_item"><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
-                    <div class="slider_item"><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
-                    <div class="slider_item"><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
-                    <div class="slider_item"><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
-                    <div class="slider_item"><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
-                </div>
+                    <div class=""><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
+                    <div class=""><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
+                    <div class=""><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
+                    <div class=""><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
+                    <div class=""><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
+                    <div class=""><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
             </div>
         </section>
     </main>
@@ -408,5 +408,6 @@
             
         </div>
     </footer>
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
+    <script src="js/slider.js"></script>
 </body>
