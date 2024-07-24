@@ -3,7 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://api-maps.yandex.ru/2.1/?apikey=47ecfe23-f9b4-4b57-9354-df32f2cb0e8e&lang=ru_RU"
+      type="text/javascript"
+    ></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Подключение FancyBox CSS -->
     <link
@@ -12,16 +15,17 @@
     />
     <!-- Подключение FancyBox JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
-    <title>Document</title>
+    <title>Competition</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header class="profile_header">
+  <body class="body partisipants competition-page">
+    <header class="header program">
       <div class="wrapper">
         <div class="top_wrapper">
           <a href="" class="logo_link">
-            <img src="img/SVG-icons/Logo_black.svg" alt="" class="logo" />
+            <img src="img/logo.svg" alt="" class="logo" />
           </a>
-          <nuv class="nuv nav-profile">
+          <nuv class="nuv">
             <span class="burger"></span>
             <ul class="nuv_list">
               <li class="nuv_list-item">
@@ -38,7 +42,7 @@
                   >Индустриальные партнеры</a
                 >
               </li>
-              <li class="nuv_list-item">
+              <li class="nuv_list-item selected">
                 <a href="competition.html" class="nuv_link">Конкурс</a>
               </li>
               <li class="nuv_list-item">
@@ -62,63 +66,119 @@
               </li>
             </ul>
           </nuv>
-          <a href="profile.html" class="entry_button authorized"
-            ><img
-              src="img/entry_image.png"
-              alt=""
-              class="profile_entry-image"
-            />
-            <span>Виталий К</span></a
-          >
-        </div>
-        <div class="top_title-container">
-          <div class="profile_owner">
-            <div class="profile_big-image-container">
-              <img src="img/entry_image.png" alt="" class="profile_big-image" />
-            </div>
-            <div class="profile_owner-information">
-              <h1 class="owner_name">Виталий Кутепов</h1>
-              <span class="owner_email">medevent@expmed.ru</span>
-            </div>
-          </div>
-          <a href="#submition_form" data-fancybox class="red_button"
-            >Подать проект на конкурс</a
-          >
-        </div>
-        <div class="profile_navigation-container">
-          <ul class="profile_navigation">
-            <li class="profile_navigation-item chosen">
-              <a href="profile.html" class="profile-item_link profil profile_mobile-item"
-                >Профиль</a
-              >
-            </li>
-            <li class="profile_navigation-item">
-              <a href="profile_projects.html" class="profile-item_link projects profile_mobile-item"
-                >Проекты</a
-              >
-            </li>
-            <li class="profile_navigation-item">
-              <a
-                href="profile_search-project.html"
-                class="profile-item_link search_projects profile_mobile-item"
-                >Поиск проектов</a
-              >
-            </li>
-            <li class="profile_navigation-item">
-              <a
-                href="profile_communication.html"
-                class="profile-item_link communication profile_mobile-item"
-                >Деловое общение</a
-              >
-            </li>
-          </ul>
-          <a href="initial.html" class="profile-item_link logout_button"
-            >Выйти</a
-          >
+          <a href="#entry_form" data-fancybox class="entry_button">вход</a>
         </div>
       </div>
     </header>
     <div class="pop-ups">
+      <form action="" class="pop-up entry_form" id="entry_form">
+        <h2 class="form-title entry_form-title">Вход</h2>
+        <input
+          type="email"
+          name="Email"
+          id=""
+          class="form_input"
+          placeholder="E-mail"
+        />
+        <div class="password_wrapper">
+          <input
+            type="password"
+            name="password"
+            id=""
+            class="form_input password_input"
+            placeholder="Пароль"
+          />
+          <span class="password_icon"></span>
+        </div>
+        <button type="submit" class="red_button entry_form-button">
+          войти
+        </button>
+        <a
+          href="#registration_form"
+          data-fancybox
+          class="catalog_gray-button allert_registr-button"
+          >Зарегистрироваться</a
+        >
+      </form>
+      <form action="" class="pop-up registration_form" id="registration_form">
+        <h2 class="form-title">Регистрация</h2>
+        <input
+          type="text"
+          class="form_input"
+          name="surname"
+          placeholder="Фамилия"
+        />
+        <input type="text" class="form_input" name="name" placeholder="Имя" />
+        <input
+          type="text"
+          class="form_input"
+          name="middle name"
+          placeholder="Отчество"
+        />
+        <input
+          type="text"
+          class="form_input"
+          name="Organization"
+          placeholder="Организация"
+        />
+        <input
+          type="text"
+          class="form_input"
+          name="post"
+          placeholder="Должность"
+        />
+        <input
+          type="email"
+          name="Email"
+          id=""
+          class="form_input"
+          placeholder="E-mail"
+        />
+        <div class="password_wrapper">
+          <input
+            type="password"
+            name="password"
+            id=""
+            class="form_input password_input"
+            placeholder="Пароль"
+          />
+          <span class="password_icon"></span>
+        </div>
+        <div class="password_wrapper">
+          <input
+            type="password"
+            name="password"
+            id=""
+            class="form_input password_input"
+            placeholder="Подтвердите пароль"
+          />
+          <span class="password_icon"></span>
+        </div>
+        <label class="registration_form-checkbox">
+          <input
+            type="checkbox"
+            name="policy"
+            id=""
+            class="registration_checkbox hidden"
+          />
+          <div class="policy_checkbox"></div>
+          <span
+            >Согласен с<a href="" class="policy_link"
+              >политикой конфиденциальности</a
+            >
+            сайта</span
+          >
+        </label>
+        <button type="submit" class="red_button registration_submit">
+          Зарегистрироваться
+        </button>
+        <a
+          href="#entry_form"
+          data-fancybox
+          class="catalog_gray-button registration_enter"
+          >войти</a
+        >
+      </form>
       <form action="" class="pop-up submition_form" id="submition_form">
         <div class="flex_container submition_flex">
         <h2 class="form-title">Подать проект на конкурс</h2>
@@ -625,7 +685,7 @@
         </div>
 
         <label class="file_input-label">
-            <input type="file" name="presentation" class="hidden">
+            <input type="file" name="photo" class="hidden">
             <span>PDF, DOC или EXCEL</span>
         </label>
         <label class="registration_form-checkbox">
@@ -636,176 +696,227 @@
         <button type="submit" class="red_button">Подать проект</button>
         </div>
     </form>
-      <form action="" class="pop-up delete-form" id="delete-form">
-        <h2>Удаление аккаунта</h2>
-        <p>Ваш аккаунт навсегда исчезнет. Удалить?</p>
-        <div class="pop-up-buttons">
-          <button type="button" class="red_button cancel_button">Отмена</button>
-          <button type="submit" class="red_button delete_button">
-            Удалить
-          </button>
-        </div>
-      </form>
-    </div>
-    <main class="wrapper profile_main">
-      <section class="profile_status profile_section">
-        <h2 class="profile_section-title">Cтатус пользователя</h2>
-        <div class="profile_status-icon approved_icon">
-          <span>Одобрена</span>
-        </div>
-        <div class="profile_status-icon rejected_icon">
-          <span>Отклонена</span>
-        </div>
-        <div class="profile_status-icon wait_icon">
-          <span>На расмотрении</span>
-        </div>
-      </section>
-      <section class="main_information profile_section">
-        <h2 class="profile_section-title">Основная информация</h2>
-        <div class="main_information-container">
-          <div class="row-1">
-            <div class="main_information-item">
-              <span>Фамилия</span>
-              <input
-                type="text"
-                name="Фамилия:"
-                form="profile_form"
-                class="main_information-input form_input"
-              />
-            </div>
-            <div class="main_information-item">
-              <span>Имя</span>
-              <input
-                type="text"
-                name="Имя"
-                form="profile_form"
-                class="main_information-input form_input"
-              />
-            </div>
-            <div class="main_information-item">
-              <span>Отчество</span>
-              <input
-                type="text"
-                name="Отчество"
-                form="profile_form"
-                class="main_information-input form_input"
-              />
-            </div>
-            <div class="main_information-item">
-              <span>Город</span>
-              <input
-                type="text"
-                name="Город:"
-                form="profile_form"
-                class="main_information-input form_input"
-              />
-            </div>
-            <div class="main_information-item">
-              <span>Телефон</span>
-              <input
-                type="tel"
-                name="Телефон:"
-                form="profile_form"
-                class="main_information-input form_input"
-              />
-            </div>
-          </div>
-          <div class="row-2">
-            <div class="main_information-item">
-              <span>Организация</span>
-              <input
-                type="text"
-                name="Организация:"
-                form="profile_form"
-                class="main_information-input form_input"
-              />
-            </div>
-            <div class="main_information-item">
-              <span>Должность</span>
-              <input
-                type="text"
-                name="Должность"
-                form="profile_form"
-                class="main_information-input form_input"
-              />
-            </div>
-            <div class="main_information-item">
-              <span>E-mail</span>
-              <input
-                type="email"
-                name="E-mail:"
-                form="profile_form"
-                class="main_information-input pencil_icon form_input"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="mail_checkbox-section profile_section">
-        <h2 class="profile_section-title">Получать уведомления на e-mail</h2>
-        <span>Статусы проектов и запросы на деловое общение</span>
-        <input
-          type="checkbox"
-          name="Рассылка"
-          form="profile_form"
-          id="mail_checkbox"
-          class="hidden"
-        />
-        <label for="mail_checkbox" class="profile_mail-checkbox">
-          <span>Получать</span>
-        </label>
-      </section>
-      <section class="entry_section profile_section">
-        <h2 class="profile_section-title">Информация для входа</h2>
-        <div class="entry_container">
-          <div class="main_information-item">
-            <span>E-mail</span>
-            <input
-              type="email"
-              name="email:"
-              form="profile_form"
-              class="main_information-input pencil_icon form_input no-padding"
-            />
-          </div>
-          <div class="main_information-item">
-            <span>Пароль</span>
-            <input
-              type="password"
-              name="пароль:"
-              form="profile_form"
-              class="main_information-input pencil_icon form_input no-padding"
-            />
-          </div>
-        </div>
-      </section>
-      <form action="" class="profile_form" id="profile_form">
-        <button type="submit" class="red_button">Сохранить изменения</button>
-        <a href="initial.html" class="logout-bottom">Выйти</a>
-        <a href="#delete-form" data-fancybox class="profile_delete-button"
-          >Удалить аккаунт</a
-        >
-      </form>
-    </main>
-  </body>
-  <script src="js/profile.js"></script>
-  <script>
-    $(document).ready(function() {
-        $('[data-fancybox]').fancybox({
-            // Настройки FancyBox
-            buttons: [
-                "zoom",
-                "close"
-            ] ,
-            touch: false,
+      <div class="pop-up rules" id="rules">
+        <h2 class="form-title">Положение о конкурсе разработок</h2>
+        <div class="rules_flex">
+        <p>Положение о конкурсе разработок в интересах медицины и здравоохранения в рамках Ярмарки продуктовых разработок в сфере медицины и здравоохранения</p>
 
-            afterShow: function(instance, current) {
-                let curentPopUp = $(current.src);
-                curentPopUp.find('a, button').on('click', function() {
-                    instance.close();
-                });
-            }
+        <p><strong>1.</strong> Настоящее Положение определяет цели и задачи, порядок организации и проведения конкурса разработок в интересах медицины и здравоохранения в рамках Ярмарки продуктовых разработок в сфере медицины и здравоохранения (далее – Конкурс).</p>
+    
+        <p><strong>2.</strong> Конкурс проводится с целью отбора и продвижения наиболее перспективных проектов в сфере разработки новых лекарственных препаратов и терапевтических и диагностических медицинских изделий, имеющих высокую социальную значимость и повышающих качество жизни населения.</p>
+          
+        <div>
+        <span>Задачи конкурса:</span>
+        <ul>
+            <li>выявление и поддержка наиболее перспективных исследований в области медицины и здравоохранения (в частности, студентов и аспирантов);</li>
+            <li>повышение мотивации к продуктоориентированной научно-исследовательской деятельности в области здравоохранения;</li>
+            <li>оказание содействия участникам Конкурса в продвижении разработок с целью их дальнейшей практической реализации;</li>
+            <li>оказание содействия в построении взаимодействия индустриальных партнеров и разработчиков инновационных медицинских разработок;</li>
+            <li>содействие формированию правовых и экономических условий для наиболее эффективного использования результатов медицинских разработок.</li>
+        </ul>
+      </div>
+        <p>По результатам экспертизы проектов будут отобраны финалисты Конкурса, которые представят свои проекты на площадке Ярмарки продуктовых разработок в сфере медицины и здравоохранения с устным докладом.</p>
+    
+        <p><strong>3.</strong> В Конкурсе могут принимать участие российские разработчики из бюджетных учреждений в сфере медицины и здравоохранения, чьи проекты относятся к лекарственным средствам и медицинским изделиям.</p>
+    
+        <p><strong>4.</strong> Претендент подает заявку через личный кабинет сайт Ярмарки разработок в электронной форме, путем заполнения данных, указанных в карточке проекта, с учетом критериев, свидетельствующих о продуктовой направленности разработки.<br>Срок предоставления заявок устанавливается до 10.09.2024.</p>
+    
+        <p><strong>5.</strong> Конкурсный отбор осуществляет жюри, в состав которого входят представители науки, бизнес-структур, общественных организаций в сфере медицины, здравоохранения и интеллектуальной собственности, а также специалисты Центра трансфера медицинских технологий ФГБУ «НЦЭСМП» Минздрава России. Состав жюри утверждается ежегодно приказом ФГБУ «НЦЭСМП» Минздрава России.</p>
+    
+        <p><strong>6.</strong> Конкурсный отбор заявок осуществляется в соответствии с Порядком проведения отбора победителей конкурса Ярмарки разработок, который является неотъемлемой частью данного Положения.</p>
+    
+        <p><strong>7.</strong> По результатам конкурсного отбора определяется 30 разработок победителей, согласно Порядку проведения отбора победителей конкурса Ярмарки разработок.</p>
+    
+        <p><strong>8.</strong> Победители получают Диплом за победу в определенной номинации конкурса Ярмарки разработок, а также возможность представить разработку в рамках основной программы Ярмарки разработок.</p>
+    
+        <p><strong>9.</strong> Информация о победителях, получивших Диплом конкурса Ярмарки разработок, размещается на официальных ресурсах ФГБУ «НЦЭСМП» Минздрава России.</p>
+        <a data-fancybox href="#submition_form" class="red_button">Подать проект</a>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="wrapper">
+        <section class="competition">
+          <h1>Конкурс разработок в интересах медицины и здравоохранения</h1>
+          <p class="competition-content">
+            Конкурс проводится с целью отбора и продвижения наиболее
+            перспективных проектов в сфере разработки новых лекарственных
+            препаратов и терапевтических и диагностических медицинских изделий,
+            имеющих высокую социальную значимость и повышающих качество жизни
+            населения.
+          </p>
+          <p class="competition-content">
+            По результатам экспертизы проектов будут отобраны финалисты
+            Конкурса, которые представят свои проекты на площадке Ярмарки
+            продуктовых разработок в сфере медицины и здравоохранения с устным
+            докладом.
+          </p>
+          <p class="competition-content">
+            Победители получают Диплом за победу в определенной номинации
+            конкурса Ярмарки разработок, а также возможность представить
+            разработку в рамках основной программы Ярмарки разработок.
+          </p>
+          <div class="competition-bottom">
+            <ul class="competition__buttons">
+              <li class="button red red2 not-change">
+                <a data-fancybox href="#submition_form">Подать проект</a>
+              </li>
+              <li class="button white"><a data-fancybox href="#rules">Читать Положение</a></li>
+            </ul>
+            <span>Срок подачи заявок 10.09.2024</span>
+          </div>
+        </section>
+        <section class="steps">
+          <h2>Конкурс проводится в три этапа</h2>
+          <div class="steps__articles">
+            <article class="steps__article">
+              <div class="steps__header-box">
+                <span>Первый этап</span>
+                <h3>
+                  Проверка заявок на предмет соответствия требованиям Положения
+                  о конкурсе
+                </h3>
+              </div>
+              <a href="#" class="button">Смотреть требования</a>
+            </article>
+            <article class="steps__article">
+              <div class="steps__header-box">
+                <span>Второй этап</span>
+                <h3>
+                  Отбор финалистов из каждой категории заявителей методом
+                  экспертной оценки по 10 балльной шкале позиций анкет
+                </h3>
+              </div>
+              <a href="#" class="button">Смотреть Критерии</a>
+            </article>
+            <article class="steps__article red red2 not-change">
+              <div class="steps__header-box">
+                <span>Финал</span>
+                <h3>
+                  В финал проходят заявки в соответствии с количеством
+                  номинаций, набравшие наибольшее количество баллов
+                </h3>
+              </div>
+              <a data-fancybox href="#submition_form" class="button">Подать проект </a>
+            </article>
+          </div>
+        </section>
+        <section class="auccion">
+          <div class="auccion__wrapper">
+            <h2>Патентный аукцион</h2>
+            <p>
+              Аукцион проводится в рамках мероприятия «Ярмарка разработок» с
+              целью отработки механизмов осуществления конкурентных способов
+              распоряжения правами на результаты интеллектуальной деятельности и
+              выявления заинтересованности лиц и индустриальных партнеров к
+              использованию такого механизма при управлении результатами
+              интеллектуальной деятельности в сфере медицины и здравоохранения
+            </p>
+            <a data-fancybox href="#rules" class="button">Читать положение</a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer wrapper">
+      <form action="" class="question_form">
+        <h2 class="sub_title">Остались вопросы?</h2>
+        <input type="text" name="имя: " class="form_input" placeholder="Имя" />
+        <input
+          type="email"
+          name="email: "
+          id=""
+          class="form_input"
+          placeholder="Email"
+        />
+        <textarea
+          name="вопрос: "
+          id=""
+          class="form_input form_textarea"
+          placeholder="Ваш вопрос"
+        ></textarea>
+        <button type="submit" class="red_button main_button question_button">
+          Отправить вопрос
+        </button>
+        <p class="policy">
+          Нажимая на кнопку, вы соглашаетесь <br />с
+          <a href="" class="policy_link">политикой конфиденциальности</a> сайта
+        </p>
+        <address class="contacts">
+          <div class="blue_container">
+            <a href="mailto:medevent@expmed.ru">medevent@expmed.ru</a>
+            <a href="tel:+7 (926) 924-81-17">+7 (926) 924-81-17</a>
+            <a href="">Политика конфиденциальности</a>
+          </div>
+          <a href="" class="telegramm"></a>
+        </address>
+      </form>
+      <div class="" id="map"></div>
+    </footer>
+    <script src="js/competition.js"></script>
+    <script type="text/javascript">
+      let center = [55.754898550407454, 37.55630547133314];
+      function init() {
+        let map = new ymaps.Map("map", {
+          center: center,
+          zoom: 17,
         });
 
-    });
-</script>
+        let placemark = new ymaps.Placemark(
+          center,
+          {
+            balloonContent: `
+      <div class="balloon">
+          <div class="balloon__adress">Краснопресненская наб., 12, ЦМТ
+            </div>
+        </div>
+     `,
+          },
+          {
+            iconLayout: "default#image",
+            iconImageHref: "img/map.svg",
+            iconImageSize: [50, 50],
+            iconImageOffset: [-30, -30],
+          }
+        );
+
+        map.controls
+          .remove("geolocationControl")
+          .remove("trafficControl")
+          .remove("typeSelector")
+          .remove("fullscreenControl")
+          .remove("rulerControl")
+          .remove("searchControl")
+          .remove("zoomControl");
+
+        placemark.options.set("hideIconOnBalloonOpen", false);
+        placemark.options.set("balloonOffset", [-90, -40]);
+        placemark.options.set("balloonCloseButton", false);
+
+        map.geoObjects.add(placemark);
+        placemark.balloon.open();
+      }
+
+      ymaps.ready(init);
+    </script>
+    <script>
+      $(document).ready(function() {
+          $('[data-fancybox]').fancybox({
+              // Настройки FancyBox
+              buttons: [
+                  "zoom",
+                  "close"
+              ] ,
+              touch: false,
+
+              afterShow: function(instance, current) {
+                  let curentPopUp = $(current.src);
+                  curentPopUp.find('a, button').on('click', function() {
+                      instance.close();
+                  });
+              }
+          });
+
+      });
+  </script>
+  </body>
 </html>

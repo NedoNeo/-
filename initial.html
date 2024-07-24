@@ -9,6 +9,11 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
@@ -22,12 +27,12 @@
                     <nuv class="nuv">
                         <span class="burger"></span>
                         <ul class="nuv_list">
-                            <li class="nuv_list-item selected"><a href="index.html" class="nuv_link">Главная</a></li>
-                            <li class="nuv_list-item"><a href="" class="nuv_link">Программа</a></li>
+                            <li class="nuv_list-item selected"><a href="initial.html" class="nuv_link">Главная</a></li>
+                            <li class="nuv_list-item"><a href="program.html" class="nuv_link">Программа</a></li>
                             <li class="nuv_list-item"><a href="catalog.html" class="nuv_link">Каталог разработок</a></li>
                             <li class="nuv_list-item"><a href="partners.html" class="nuv_link">Индустриальные партнеры</a></li>
-                            <li class="nuv_list-item"><a href="" class="nuv_link">Конкурс</a></li>
-                            <li class="nuv_list-item"><a href="" class="nuv_link">Участникам</a></li>
+                            <li class="nuv_list-item"><a href="competition.html" class="nuv_link">Конкурс</a></li>
+                            <li class="nuv_list-item"><a href="patisipants.html" class="nuv_link">Участникам</a></li>
                             <li class="nuv_list-item"><a href="contacts.html" class="nuv_link">Контакты</a></li>
                             <li class="mobile_nuv-list">
                                 <address class="mobile_address">
@@ -46,10 +51,10 @@
             </div>
         </div>
         <div class="title_container">
-            <div class="wrapper">
+            <div class="wrapper justify">
                 <h1 class="main_title">Ярмарка разработок</h1>
                 <div class="sub_container">
-                    <button type="button" class="registration_button">Зарегистрироваться</button>
+                    <a href="#bottom-body-form" type="button" class="registration_button">Зарегистрироваться</a>
                     <div class="date_grid-container">
                         <div class="column_one">
                             <span class="numbers">25-26</span>
@@ -71,6 +76,116 @@
             </div>
         </div>
     </header>
+    <div class="pop-ups">
+        <form action="" class="pop-up entry_form" id="entry_form">
+          <h2 class="form-title entry_form-title">Вход</h2>
+          <input
+            type="email"
+            name="Email"
+            id=""
+            class="form_input"
+            placeholder="E-mail"
+          />
+          <div class="password_wrapper">
+            <input
+              type="password"
+              name="password"
+              id=""
+              class="form_input password_input"
+              placeholder="Пароль"
+            />
+            <span class="password_icon"></span>
+          </div>
+          <button type="submit" class="red_button entry_form-button">
+            войти
+          </button>
+          <a
+            href="#registration_form"
+            data-fancybox
+            class="catalog_gray-button allert_registr-button"
+            >Зарегистрироваться</a
+          >
+        </form>
+        <form action="" class="pop-up registration_form" id="registration_form">
+          <h2 class="form-title">Регистрация</h2>
+          <input
+            type="text"
+            class="form_input"
+            name="surname"
+            placeholder="Фамилия"
+          />
+          <input type="text" class="form_input" name="name" placeholder="Имя" />
+          <input
+            type="text"
+            class="form_input"
+            name="middle name"
+            placeholder="Отчество"
+          />
+          <input
+            type="text"
+            class="form_input"
+            name="Organization"
+            placeholder="Организация"
+          />
+          <input
+            type="text"
+            class="form_input"
+            name="post"
+            placeholder="Должность"
+          />
+          <input
+            type="email"
+            name="Email"
+            id=""
+            class="form_input"
+            placeholder="E-mail"
+          />
+          <div class="password_wrapper">
+            <input
+              type="password"
+              name="password"
+              id=""
+              class="form_input password_input"
+              placeholder="Пароль"
+            />
+            <span class="password_icon"></span>
+          </div>
+          <div class="password_wrapper">
+            <input
+              type="password"
+              name="password"
+              id=""
+              class="form_input password_input"
+              placeholder="Подтвердите пароль"
+            />
+            <span class="password_icon"></span>
+          </div>
+          <label class="registration_form-checkbox">
+            <input
+              type="checkbox"
+              name="policy"
+              id=""
+              class="registration_checkbox hidden"
+            />
+            <div class="policy_checkbox"></div>
+            <span
+              >Согласен с<a href="" class="policy_link"
+                >политикой конфиденциальности</a
+              >
+              сайта</span
+            >
+          </label>
+          <button type="submit" class="red_button registration_submit">
+            Зарегистрироваться
+          </button>
+          <a
+            href="#entry_form"
+            data-fancybox
+            class="catalog_gray-button registration_enter"
+            >войти</a
+          >
+        </form>
+      </div>
     <main class="main">
         <section class="about wrapper">
             <h2 class="about_title">Ярмарка продуктовых разработок в сфере медицины и здравоохранения. Уникальное отраслевое событие</h2>
@@ -128,7 +243,7 @@
             <h2 class="sub_title">Программа мероприятия</h2>
             <div class="program_slider program_flex-container">
             <div class="program_container">
-                <div class="date_container red">
+                <div class="date_container red not-change">
                     <span>25 ноября</span>
                     <span>Зал «Ладога»</span>
                 </div>
@@ -282,6 +397,7 @@
                     <p class="name">Михаил Альбертович Мурашко</p>
                     <p class="grade">Министр здравоохранения РФ</p>
                 <figcaption>
+                    
                </figure> 
                <figure class="guests_item">
                 <img src="img/Cosenco.png" alt="Валентина Владимировна Косенко" class="guests_item-image">
@@ -291,7 +407,7 @@
                 </figcaption>
                </figure> 
             </div>
-            <button type="button" class="more_button">Показать еще</button>
+            <button type="button" class="more_button guests_button">Показать еще</button>
         </section>
         <section class="organizers wrapper">
             <h2 class="sub_title">Организаторы</h2>
@@ -312,7 +428,7 @@
         </section>
         <section class="developers wrapper">
             <div class="developers_title">
-                <h2 class="sub_title">Индустриальные партнеры</h2>
+                <h2 class="sub_title">Разработчики</h2>
             </div>
             <div class="slider">
                     <div class="slider_item developers_item"><img src="img/developer-1.png" alt="Medical Imagine" class="developers_image"></div>
@@ -322,11 +438,11 @@
                     <div class="slider_item developers_item"><img src="img/developer-5.png" alt="Курчатовский институт" class="developers_image"></div>
                     <div class="slider_item developers_item"><img src="img/developer-6.png" alt="МНТК микрохирургии глаза" class="developers_image"></div>
             </div>
-            <button type="button" class="more_button">Все проекты</button>
+            <a href="catalog.html" class="more_button slider_link">Все проекты</a>
         </section>
         <section class="partners wrapper">
             <div class="developers_title">
-                <h2 class="sub_title">Разработчики</h2>
+                <h2 class="sub_title">Индустриальные партнеры</h2>
             </div>
             <div class="slider">
                     <div class="slider_item"><img src="img/developer-1.png" alt="Medical Imagine" class="developers_image"></div>
@@ -336,9 +452,9 @@
                     <div class="slider_item"><img src="img/developer-5.png" alt="Курчатовский институт" class="developers_image"></div>
                     <div class="slider_item"><img src="img/developer-6.png" alt="МНТК микрохирургии глаза" class="developers_image"></div>
             </div>
-            <button type="button" class="more_button">Индустриальные партнеры</button>
+            <a href="partners.html" class="more_button slider_link">Индустриальные партнеры</a>
         </section>
-        <section class="register">
+        <section class="register" id="bottom-body-form">
             <form action="POST" class="register_form">
                 <h2 class="sub_title">Регистрация на мероприятие</h2>
                 <input type="text" name="Фамилия" id="" class="form_input" placeholder="Фамилия">
@@ -369,7 +485,7 @@
                         </label>
                     </div>
                 </div>
-                <button type="submit" class="red_button main_button register_button">Зарегистрироваться</button>
+                <button type="button" class="red_button main_button register_button">Зарегистрироваться</button>
                 <p class="policy">Нажимая на кнопку, вы соглашаетесь <br>с <a href="" class="policy_link">политикой конфиденциальности</a> сайта</p>
             </form>
         </section>
@@ -378,12 +494,12 @@
                 <h2 class="sub_title">Ярмарка Разработок 2023</h2>
             </div>
             <div class="slider last_year-slider">
-                    <div class=""><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
-                    <div class=""><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
-                    <div class=""><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
-                    <div class=""><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
-                    <div class=""><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
-                    <div class=""><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
+                    <div class="last_year-item"><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
+                    <div class="last_year-item"><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
+                    <div class="last_year-item"><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
+                    <div class="last_year-item"><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
+                    <div class="last_year-item"><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
+                    <div class="last_year-item"><img src="img/last-year-1.png" alt="" class="last-year_image"></div>
             </div>
         </section>
     </main>
@@ -408,6 +524,72 @@
             
         </div>
     </footer>
-    <!-- <script src="index.js"></script> -->
+     <script src="js/initital.js"></script>
     <script src="js/slider.js"></script>
+    <script type="text/javascript">
+        let center = [55.754898550407454, 37.55630547133314];
+        function init() {
+          let map = new ymaps.Map("map", {
+            center: center,
+            zoom: 17,
+          });
+  
+          let placemark = new ymaps.Placemark(
+            center,
+            {
+              balloonContent: `
+        <div class="balloon">
+            <div class="balloon__adress">Краснопресненская наб., 12, ЦМТ
+              </div>
+          </div>
+       `,
+            },
+            {
+              iconLayout: "default#image",
+              iconImageHref: "img/map.svg",
+              iconImageSize: [50, 50],
+              iconImageOffset: [-30, -30],
+            }
+          );
+  
+          map.controls
+            .remove("geolocationControl")
+            .remove("trafficControl")
+            .remove("typeSelector")
+            .remove("fullscreenControl")
+            .remove("rulerControl")
+            .remove("searchControl")
+            .remove("zoomControl");
+  
+          placemark.options.set("hideIconOnBalloonOpen", false);
+          placemark.options.set("balloonOffset", [-90, -40]);
+          placemark.options.set("balloonCloseButton", false);
+  
+          map.geoObjects.add(placemark);
+          placemark.balloon.open();
+        }
+  
+        ymaps.ready(init);
+      </script>
+    <script>
+        $(document).ready(function() {
+            $('[data-fancybox]').fancybox({
+                buttons: [
+                    "zoom",
+                    "close"
+                ] ,
+                touch: false,
+
+                afterShow: function(instance, current) {
+                    let curentPopUp = $(current.src);
+                    curentPopUp.find('a, button').on('click', function() {
+                        instance.close();
+                    });
+                }
+            });
+
+        });
+    </script>
 </body>
+
+
