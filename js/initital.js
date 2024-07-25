@@ -100,9 +100,11 @@ burger.addEventListener("click", () => {
     }
 })
 
-mediaMatchMobile.addEventListener("change", () => {
-    topWrapper.style.position = "static";
+mediaMatchMobile.addEventListener("change", (event) => {
+    if(event.matches) {
+        topWrapper.style.position = "static";
     mobileMenu.style.display = 'flex';
+    }
 })
 
 if(window.matchMedia("(max-width: 600px)").matches) {

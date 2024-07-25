@@ -87,9 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     })
     
-    mediaMatchMobile.addEventListener("change", () => {
-        topWrapper.style.position = "static";
+    mediaMatchMobile.addEventListener("change", (event) => {
+        if(event.matches) {
+            topWrapper.style.position = "static";
         mobileMenu.style.display = 'flex';
+        }
     })
 
 
