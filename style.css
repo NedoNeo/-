@@ -345,7 +345,7 @@ html {
   .event {
     display: flex;
     justify-content: space-between;
-    margin-top: -235px;
+    margin-top: -241px;
     margin-bottom: 100px;   
   }
 
@@ -358,10 +358,11 @@ html {
   }
   
   .event__title h1, .competition h1, .top h1 {       
-    font-size: 54px;
+    font-size: 55px;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 11px;
     font-family: 'Acrobat', sans-serif;
+    line-height: 42.6px;
   }
   
   .event__name, .middle h2, .middle__list-item h3, .quote__title, .articles__title, .articles__item h3, .route__title, .route__list-item--top h3 {
@@ -371,7 +372,7 @@ html {
 
   .event__dates {
     display: flex;
-    gap: 20px;
+    gap: 12px;
   }
   
   
@@ -384,11 +385,11 @@ html {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 65%;
+    width: 66%;
   }
   
   .event__item {
-    padding: 30px;
+    padding: 30px 27px;
     box-sizing: border-box;
     background-color: #fff;
     border-radius: 20px;
@@ -400,12 +401,15 @@ html {
     line-height: 17.5px;
     font-size: 14px;
     font-weight: 400;
+    display: block;
+margin-bottom: 15px;
   }
   
   .event__name {
     font-size: 36px;
     font-weight: bold;
     line-height: 36px;
+    width: 76%;
   }
   
   .blue .event__name {
@@ -422,8 +426,8 @@ html {
   
   .event__man {
     font-size: 20px;
-    line-height: 25px;
-    margin-top: 30px;
+    line-height: 26px;
+    margin-top: 33px;
   }
   
   .blue {
@@ -470,6 +474,7 @@ html {
     font-size: 16px;
     line-height: 20px;
     color: #5E5E5E;
+    width: 75%;
   }
   
   
@@ -489,6 +494,7 @@ html {
   .margin20 {
     box-sizing: border-box;
   padding-left: 20px;
+  padding-top: 6px;
   }
   
   .competition-page::after {
@@ -852,6 +858,9 @@ html {
     transition: all 0.3s;
   }
   
+  .program.not {
+    margin-top: 0 !important;
+  }
   .christs .background, .christs .cross {
     transition: fill 0.3s;
   }
@@ -2114,7 +2123,7 @@ body {
 
     font-family: "SF Pro Display";
 
-    margin: 40px auto 0;
+    margin: 48px auto 0;
 }
 
 .more_button:hover {
@@ -2599,7 +2608,7 @@ body {
 
   .catalog_elipse-container {
     width: 322px;
-    height: 45px;
+    height: 55px;
 
     background-image: url("img/SVG-icons/catalog_elipse.svg");
     background-position: center center;
@@ -2625,7 +2634,7 @@ body {
   }
 
   .catalog_main {
-    margin-top: -40px;
+    margin-top: -57px;
   }
 
   .catalog_title-container {
@@ -2645,7 +2654,7 @@ body {
 
   .catalog_search-container {
     display: flex;
-    gap: 20px;
+    gap: 27px;
 
     position: relative;
 
@@ -2716,9 +2725,8 @@ body {
 
   .search {
     width: 447px;
-    right: 0;
-
-    top: 23px;
+    right: 3px;
+    top: 32px;
   }
 
   .catalog_container {
@@ -2770,9 +2778,6 @@ body {
     height: 100%;
     overflow: auto;
     padding: 0px 4px 0 14px;
-
-    margin-top: 14px;
-
     
 }
 
@@ -2795,7 +2800,7 @@ body {
    
     border-right: 1px solid #A3A3A3;
     width: 100%;
-    padding-bottom: 10px;
+    padding-bottom: 11px;
 
     display: flex;
     gap: 5px;
@@ -2927,7 +2932,7 @@ body {
 }
 
 .project_author {
-
+  width: 75%;
     font-size: 16px;
     font-weight: 400;
     line-height: 20px;
@@ -4245,7 +4250,7 @@ line-height: 14.32px; }
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 55px;
+      gap: 34px;
   }
   .event__item {
       padding: 20px;
@@ -4275,9 +4280,10 @@ line-height: 14.32px; }
   .event__title h1 { 
       font-size: 32px;
       line-height: 28.8px;
-      margin-top: 30px;
+      margin-top: -10px;
       width: auto;
-      color: #0E1132;
+      color: #fff;
+      margin-bottom: 34px;
   }
   .event__dates li {
       font-weight: 500;
@@ -4286,11 +4292,13 @@ line-height: 14.32px; }
       width: auto;
       height: 14px;
       border-radius: 0;
-      padding-bottom: 11.5px;
+      padding-bottom: 15.5px;
       padding-top: 11.5px;
       box-sizing: border-box;
       background-color: transparent;
       margin: 0;
+      padding-right: 0;
+      padding-left: 0;
 
   }
   .red:not(.not-change) {
@@ -4305,11 +4313,13 @@ line-height: 14.32px; }
   }
   .event__time {
       font-weight: 500;
+      margin-bottom: 9px;
   }
   .event__name, .blue .event__name {
       font-weight: 800;
       font-size: 20px;
       line-height: 20px;
+      width: 100%;
   }
   .blue.one::after {
       width: 40px;
@@ -4326,16 +4336,20 @@ line-height: 14.32px; }
   .event__man {
       font-size: 14px;
       line-height: 17.5px;
+      margin-top: 21px;
   }
   .event__organization {
       font-weight: 500;
       font-size: 12px;
       line-height: 15px;
+      margin-bottom: 12px;
+
   }
   .event__description {
       font-weight: 500;
       font-size: 12px;
       line-height: 15px;
+      width: 100%;
   }
   .competition {
     width: 100%!important;
@@ -5944,6 +5958,37 @@ margin-bottom: 10px;
 
 
 @media (max-width: 350px) {
+  .catalog_bring-button {
+  margin-top: 50px;
+  }
+
+  .project_title-container {
+    gap: 5px;
+  }
+
+  .project_title {
+    width: 204px;
+    line-height: 21px;
+    font-size: 20px;
+   }
+   .project_author {
+    font-size: 14px;
+    line-height: 19px;
+    margin-top: 8px;
+}
+.project_appointment-button {
+  margin-top: 15px;
+}
+
+.catalog_gray-button {
+padding: 16px 16px 14px 16px;
+
+font-size: 12px;
+}
+
+.project_container {
+  gap: 11px;
+}
   .route__button {
     padding-left: 35px;
   
