@@ -105,6 +105,19 @@ mediaMatchMobile.addEventListener("change", () => {
     mobileMenu.style.display = 'flex';
 })
 
+if(window.matchMedia("(max-width: 600px)").matches) {
+    guestContainerheight = guestContainer.querySelector(".guests_item").scrollHeight * 3 + 62 + "px";
+        guestContainer.style.height = guestContainerheight
+}
+
+window.matchMedia("(max-width: 600px)").addEventListener("change", (event) => {
+        if(event.matches) {
+        guestContainerheight = guestContainer.querySelector(".guests_item").scrollHeight * 3 + 62 + "px";
+        guestContainer.style.height = guestContainerheight
+
+    }
+})
+
 guestContainer.style.height = guestContainerheight
 
 window.addEventListener("resize", () => {

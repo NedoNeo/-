@@ -3989,7 +3989,7 @@ padding: 14px; }
 }
 
   .program_container {
-    width: 84vw;
+    width: 85vw;
   }
 
   .header {
@@ -4228,6 +4228,19 @@ line-height: 14.32px; }
   .wrapper {
       padding: 0 20px;
   }
+
+  .about {
+    padding: 0 10px!important;
+  }
+
+  .about_title {
+    padding: 0 10px;
+  }
+
+  .about_grid-container {
+    padding: 0 10px;
+  }
+
   .event {
       flex-direction: column;
       justify-content: center;
@@ -4875,7 +4888,7 @@ margin-top: 76px;
 }
 
 .about_slider .slick-dots {
-    bottom: -30px;
+   bottom: -28px;
 }
 
 .slick-dots li {
@@ -5589,10 +5602,17 @@ margin-bottom: 10px;
 
     .slider_text {
       font-size: 14px;
-      line-height: 15.1px;
+      line-height: 16.8px;
+      font-family: "SF Pro Display";
     }
     .slider_text-author {
-      margin-top:50px;
+      font-size: 15px;
+    }
+
+    .about_slider-item > span:last-child {
+      font-size: 12px;
+
+      line-height: 12.4px;
     }
 
     .about_slider {
@@ -5611,8 +5631,18 @@ margin-bottom: 10px;
     }
 
     .program {
-        overflow: hidden;
+      margin-top: 115px !important;
+
+      padding: 0 10px;
     } 
+
+    .program .sub_title {
+      margin-left: 10px;
+    }
+
+    .program_flex-container {
+      margin-top: 30px;
+    }
 
     .program_container {
         
@@ -5659,7 +5689,7 @@ margin-bottom: 10px;
     }
 
     .guests  {
-        margin-top: 90px;
+        margin-top: 96px;
     }
 
     .guests .sub_title {
@@ -5669,6 +5699,8 @@ margin-bottom: 10px;
     .guests_container {
         margin-top: 30px;
         justify-content: center;
+
+        row-gap: 31px;
     } 
 
     .guests_item {
@@ -5691,11 +5723,26 @@ margin-bottom: 10px;
         font-size: 12px;
         font-weight: 400;
         line-height: 14.4px;
+
+        margin-top: 6px;
+        line-height: 12.4px;
+    }
+
+    .more_button {
+      font-size: 13px;
+      margin-top: 42px;
     }
 
     .organizers {
         margin-top: 90px;
     } 
+
+    .organizers_name {
+      font-size: 15px;
+      width: 195px;
+
+      margin-top: 7px;
+    }
 
     .organizers .sub_title {
         text-align: center;
@@ -5714,12 +5761,24 @@ margin-bottom: 10px;
 
     .organizers_image {
         width: 80px;
-        height: 90px;
+        height: 85px;
     }
 
     .developers {
-        margin-top: 90px;
+        margin-top: 86px;
     } 
+
+    .slider {
+      margin-top: 30px;
+    }
+
+    .slider_link {
+      display: none;
+    }
+
+    .partners {
+      margin-top: 108px;
+    }
 
     .developers_title {
         justify-content: center;
@@ -5744,12 +5803,41 @@ margin-bottom: 10px;
     }
 
     .register {
-        margin-top: 90px;
+        margin-top: 110px;
         padding: 20px;
 
         background: linear-gradient(103.7deg, #A87285 0%, #767EB1 100%);
 
         min-height: auto;
+    }
+
+    .register_form h2 {
+      margin-bottom: 40px;
+    }
+
+    .register_button {
+      margin-top: 10px;
+    }
+
+    .question_form h2 {
+      margin-bottom: 42px;
+    }
+
+    .footer {
+      margin-top: 96px;
+    }
+
+    .policy {
+      margin-top: 8px;
+    }
+
+    .last_year-galary {
+      margin-top: 88px;
+    }
+
+    .form_input {
+      margin-bottom: 9px;
+      font-size: 12px;
     }
 
     .register::before {

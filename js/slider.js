@@ -10,11 +10,10 @@ $(document).ready(function(){
     });
 
     $('.slider').slick({
-        autoplay: false, // Автоматическое прокручивание слайдов
+        autoplay: false, 
         dots: true,
         arrows:true,
         variableWidth: true,
-        // slidesToShow: 6, // Количество отображаемых слайдов за раз
         slidesToScroll: 1,
         adaptiveHeight: true,
     });
