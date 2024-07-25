@@ -2630,7 +2630,7 @@ body {
     margin-top: 30px;
 
     text-align: center;
-    width: 234px;
+    width: max-content;
   }
 
   .catalog_main {
@@ -5809,7 +5809,7 @@ margin-bottom: 10px;
 
 
     .catalog_bring-button {
-        width: 205px;
+        /* width: 205px; */
 
         font-size: 12px;
     }
@@ -5872,6 +5872,9 @@ margin-bottom: 10px;
 @media (max-width: 350px) {
   .catalog_bring-button {
   margin-top: 50px;
+  }
+  .catalog_bring-button.smaller-margin {
+    margin-top: 20px;
   }
 
   .project_title-container {
