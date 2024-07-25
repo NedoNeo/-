@@ -117,8 +117,52 @@
             
         </div>
     </footer>
-    <!-- <script src="js/same.js"></script> -->
-    <script src="js/partners.js"></script>
+    <script src="js/contacts.js"></script>
+    <script type="text/javascript">
+        let center = [55.754898550407454, 37.55630547133314];
+        function init() {
+          let map = new ymaps.Map("map", {
+            center: center,
+            zoom: 17,
+          });
+  
+          let placemark = new ymaps.Placemark(
+            center,
+            {
+              balloonContent: `
+        <div class="balloon">
+            <div class="balloon__adress">Краснопресненская наб., 12, ЦМТ
+              </div>
+          </div>
+       `,
+            },
+            {
+              iconLayout: "default#image",
+              iconImageHref: "img/map.svg",
+              iconImageSize: [50, 50],
+              iconImageOffset: [-30, -30],
+            }
+          );
+  
+          map.controls
+            .remove("geolocationControl")
+            .remove("trafficControl")
+            .remove("typeSelector")
+            .remove("fullscreenControl")
+            .remove("rulerControl")
+            .remove("searchControl")
+            .remove("zoomControl");
+  
+          placemark.options.set("hideIconOnBalloonOpen", false);
+          placemark.options.set("balloonOffset", [-90, -40]);
+          placemark.options.set("balloonCloseButton", false);
+  
+          map.geoObjects.add(placemark);
+          placemark.balloon.open();
+        }
+  
+        ymaps.ready(init);
+      </script>
     <script>
         $(document).ready(function() {
             $('[data-fancybox]').fancybox({

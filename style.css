@@ -521,6 +521,9 @@ margin-bottom: 15px;
   .competition__buttons .button {
     margin-top: 0;
 
+    position: relative;
+    z-index: 2;
+
     padding: 14px 17px;
   }
 
@@ -1359,7 +1362,7 @@ body {
 }
 
 .contact_footer {
-  margin-top: -120px !important;
+  margin-top: -131px !important;
 }
 
 .animation_container {
@@ -2674,7 +2677,7 @@ body {
     margin-top: 30px;
 
     text-align: center;
-    width: 234px;
+    width: max-content;
   }
 
   .catalog_main {
@@ -3952,6 +3955,10 @@ padding: 14px; }
   position: relative;
 
   --icon_rotate: rotate(90deg);
+}
+
+.contact_footer {
+  margin-top: -103px !important;
 }
 
 .mobile_filter-container {
@@ -5998,7 +6005,7 @@ margin-bottom: 10px;
 
 
     .catalog_bring-button {
-        width: 205px;
+        /* width: 205px; */
 
         font-size: 12px;
     }
@@ -6061,6 +6068,9 @@ margin-bottom: 10px;
 @media (max-width: 350px) {
   .catalog_bring-button {
   margin-top: 50px;
+  }
+  .catalog_bring-button.smaller-margin {
+    margin-top: 20px;
   }
 
   .project_title-container {
