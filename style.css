@@ -502,8 +502,43 @@ margin-bottom: 15px;
   }
     
   .competition {
-    width: 69%;
-    margin-top: -235px;
+    /* width: 69%; */
+    margin-top: -240px;
+  }
+
+  .competition_top-container {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+  }
+
+  .competition-content {
+      width: 60%;
+      margin-bottom: 19px !important;
+  }
+
+  .competition__buttons .button {
+    margin-top: 0;
+
+    padding: 14px 17px;
+  }
+
+  .competition-bottom {
+    margin-top: 41px;
+  }
+
+  .competition_top-container h1 {
+    width: 60%;
+  }
+
+  .competition_elipse-container {
+    width: 276px;
+    height: 90px;
+    background-image: url("img/SVG-icons/concurs-elipse.svg");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 
   .competition-content, .middle__text {
@@ -568,7 +603,7 @@ margin-bottom: 15px;
 
   
   .steps {
-    margin-top: 120px;
+    margin-top: 118px;
   }
   
   .steps h2, .middle h2, .articles__title, .route__title {
@@ -576,6 +611,15 @@ margin-bottom: 15px;
     font-size: 36px;
     line-height: 32.4px;
     margin-bottom: 40px;
+  }
+
+  .steps h2 {
+    font-size: 31px;
+  }
+
+
+  .steps__articles > .steps__article:first-child h3 {
+    width: 69%;
   }
   
   .steps__articles, .middle__list, .articles__container {
@@ -598,7 +642,7 @@ margin-bottom: 15px;
   }
 
   .steps__article {
-    padding: 20px;
+    padding: 20px 20px 30px;
   }
 
   .steps__article h3, .auccion h2 {
@@ -921,7 +965,7 @@ margin-bottom: 15px;
   }
   
   .auccion__wrapper {
-    width: 80%;
+    width: 81%;
   }
   
   .auccion {
@@ -3993,6 +4037,8 @@ padding: 14px; }
   margin-bottom: 20px;
 }
 
+
+
   .program_container {
     width: 85vw;
   }
@@ -4352,12 +4398,18 @@ line-height: 14.32px; }
       width: 100%;
   }
   .competition {
-    width: 100%!important;
+    margin-top: -251px;
   }
+
+  .competition_elipse-container {
+    display: none;
+  }
+
   .competition h1 {
     font-weight: 800;
     font-size: 32px;
     line-height: 28.8px;
+    width: 91%;
   }
 
 
@@ -4367,16 +4419,27 @@ line-height: 14.32px; }
 
   }
 
+  .competition_top-container {
+    margin-bottom: 12px;
+  }
+
   .competition-content {
     font-weight: 400;
     font-size: 14px;
     line-height: 17.5px;
 
+    margin-bottom: 21px !important;
+
+    width: 100%;
+
   }
   .competition-bottom {
     flex-direction: column;
     align-items: start;
+
+    margin-top: 32px;
   }
+
   .competition__buttons {
     flex-direction: column;
     align-items: center;
@@ -4405,6 +4468,14 @@ line-height: 14.32px; }
   margin-top: 90px;
 }
 
+.steps__article:nth-child(2n+2) h3 {
+  width: 98%;
+}
+
+.steps__article:nth-child(2n+3) h3 {
+  width: 85%;
+}
+
 .steps h2 {
   font-weight: 800;
   font-size: 32px;
@@ -4418,13 +4489,25 @@ line-height: 14.32px; }
 }
 .steps__article {
   width: 100%;
-  padding: 20px;
+  padding: 19px;
 }
 .steps__article span {
   font-weight: 500;
   font-size: 12px;
   line-height: 15px;
+
+  text-transform: uppercase;
+  color: #5E5E5E;
 }
+
+.steps__articles > .steps__article:first-child h3 {
+  width: 100%;
+}
+
+.steps__header-box h3 {
+  margin-top: 6px;
+}
+
 .steps__article h3 {
   font-size: 20px;
 
@@ -4438,7 +4521,11 @@ line-height: 14.32px;}
 
 .auccion {
   margin-top: 90px;
-  padding: 180px 20px 20px;
+  padding: 180px 20px 18px;
+
+  margin-bottom: 0;
+
+  border-radius: 15px;
 
   background-image: url("img/concurs-mobile.png");
   background-position: left 20px top 20px;
@@ -4448,6 +4535,11 @@ line-height: 14.32px;}
 .auccion__wrapper {
   width: 100%;
 }
+
+.competition_footer {
+  margin-top: 90px !important;
+} 
+
 .auccion h2 {
   font-size: 20px;
   line-height: 20px;
@@ -4455,14 +4547,16 @@ line-height: 14.32px;}
 }
 .auccion p {
   font-size: 14px;
-  line-height: 17.5px;
-  margin-bottom: 20px;
+  line-height: 18px;
+  margin-bottom: 0;
 }
 .auccion__wrapper a {
   font-size: 12px;
 
 line-height: 14.32px;
-width: 100%;}
+width: 100%;
+margin-top: 18px;
+}
 
 .partisipants-btns {
   display: flex;
@@ -4531,6 +4625,13 @@ line-height: 20px;}
   line-height: 28.8px;
   margin-bottom: 30px;
 }
+
+.steps h2 {
+  width: 98%;
+  font-size: 28px;
+}
+
+
 .articles__list {
   margin-left: 20px;
 }
