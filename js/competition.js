@@ -6,55 +6,74 @@ document.addEventListener("DOMContentLoaded", () => {
     const entryButton =  topWrapper.querySelector(".entry_button");
     const subForm = document.querySelector('.submition_form');
     let isAnimated = false;
+    let imgConatainer = document.querySelector(".submition_form").querySelector(".img_container");
+    let imgArray = [];
+    let fileArray = [];
 
-    class selectList {
-        constructor(selectElement, animatedIcon) {
-            this.selectElement = selectElement;
-            this.animatedIcon = animatedIcon;
-        }
-    
-        change() {
-            if(this.selectElement.classList.contains('hidden')) {
-                this.animatedIcon.style.setProperty('--icon_rotate', "rotate(-90deg)")
-                this.openList();
-                setTimeout(() => {
-                    isAnimated = false;
-                },900)
-            } else {
-                setTimeout(() => {
-                    isAnimated = false;
-                },900)
-                this.closeList(900)
-                this.animatedIcon.style.setProperty('--icon_rotate', "rotate(90deg)")
-            }
-            
-        }
-    
-        openList() {
-            this.selectElement.classList.toggle("hidden");
-            let height =this.selectElement.scrollHeight;
-            this.selectElement.style.height = "0";
-    
-            setTimeout (()=> {
-                this.selectElement.style.height = height + "px";
-              },10)
-        }
-    
-        closeList(animationDelay) {
-            this.selectElement.style.height = "0";
-            setTimeout (() => {
-                this.selectElement.classList.toggle("hidden");  
-            }, animationDelay)
+    const burgerMobileMathc = window.matchMedia("(max-width: 850px)");
+    let headerPadding = 59;
+    let secondHeaderPadiing = 10 ;
+    let name = "wrapper"
+    let color = ""
+    let logoColor = "#FFFFFF"
+
+
+
+    function mobileMatch (event) {
+        if(event.matches) {
+            headerPadding = 69;
+            secondHeaderPadiing = 69;
+            name = "ztfcka"
+        } else {
+            headerPadding = 59;
+            secondHeaderPadiing = 10 ;
+            name = "wrapper"
         }
     }
+    
+    mobileMatch(burgerMobileMathc)
+    
+    burgerMobileMathc.addEventListener("change", mobileMatch); 
+    
+    
+    window.addEventListener("scroll", (event) => {
+        let mainHeader = document.querySelector(".header");
+        let header = document.querySelector(".top_wrapper");
+        let logo = document.querySelectorAll(".logo_link svg *");
+        if(window.scrollY > 0) {
+            header.classList.add("fixed");
+            color = "#FFFFFF";
+            logoColor = "#0E1132";
+            header.firstElementChild.classList.add(`${name}`);
+            header.style.backgroundColor = "#FFFFFF";
+            mainHeader.style.paddingTop = headerPadding + "px";
+            logo.forEach(element => {
+                element.style.fill = "#0E1132"
+            })
+        }
+        if(window.scrollY === 0) {
+            header.classList.remove("fixed");
+            color = "";
+            logoColor = "#FFFFFF"  ;
+            header.firstElementChild.classList.remove(`${name}`);
+            header.style.backgroundColor = "";
+            mainHeader.style.paddingTop = secondHeaderPadiing + "px";
+            logo.forEach(element => {
+                element.style.fill = "#FFFFFF" 
+            })
+        }
+    })
+
 
 
     burger.addEventListener("click", () => {
         if(!burger.classList.contains("burger_active")) {
-            topWrapper.style.position = "fixed";
+            document.querySelector("body").style.overflow = "hidden";
             topWrapper.style.backgroundColor = "#FFFFFF";
             mobileMenu.style.display = "flex";
-            topWrapper.querySelector(".logo").setAttribute("src", "img/SVG-icons/logo-mobile.svg");
+            topWrapper.querySelectorAll(".logo_link svg *").forEach(element => {
+                element.style.fill = "#0E1132";
+            })
             burger.style.backgroundColor = "#F2F2F2";
             entryButton.style.backgroundColor = "#F2F2F2";
             setTimeout(() => {
@@ -68,9 +87,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 300);
             burger.classList.toggle("burger_active");
         } else {
-            topWrapper.querySelector(".logo").setAttribute("src", "img/logo.svg");
-            topWrapper.style.position = "absolute";
-            topWrapper.style.backgroundColor = "transparent";
+            document.querySelector("body").style.overflow = "auto";
+            topWrapper.querySelectorAll(".logo_link svg *").forEach(element => {
+                element.style.fill = logoColor;
+            })
+            topWrapper.style.backgroundColor = color;
             mobileMenu.style.right = "105%";
             burger.style.backgroundColor = "#FFFFFF";
             entryButton.style.backgroundColor = "#FFFFFF";
@@ -86,6 +107,73 @@ document.addEventListener("DOMContentLoaded", () => {
             burger.classList.toggle("burger_active");
         }
     })
+
+
+
+
+
+
+    class selectList {
+        constructor(selectElement, animatedIcon) {
+            this.selectElement = selectElement;
+            this.animatedIcon = animatedIcon;  
+    
+            this.handleTransitionEnd = this.handleTransitionEnd.bind(this);  
+            this.selectElement.addEventListener("transitionend", this.handleTransitionEnd);
+        }
+    
+        handleTransitionEnd(ev) {
+            if (this.selectElement.style.height === "0px") {
+                console.log(1);
+                this.selectElement.classList.add("hidden");
+                this.selectElement.removeEventListener("transitionend", this.handleTransitionEnd);
+            }
+        }
+    
+        change() {
+            if(this.selectElement.classList.contains('hidden')) {
+                this.animatedIcon.style.setProperty('--icon_rotate', "rotate(-90deg)");
+                this.openList();
+                setTimeout(() => {
+                    isAnimated = false;
+                },900)
+            } else {
+                setTimeout(() => {
+                    isAnimated = false;
+                },900)
+                this.closeList(900)
+                this.animatedIcon.style.setProperty('--icon_rotate', "rotate(90deg)")
+            }
+            
+        }
+    
+        openList() {
+            this.selectElement.classList.remove("hidden");
+            let height =this.selectElement.scrollHeight;
+            this.selectElement.style.height = "0px";
+    
+            setTimeout (()=> {
+                this.selectElement.style.height = height + "px";
+              },10)
+        }
+    
+        closeList(animationDelay) {
+            this.selectElement.style.height = "0px";
+        }
+    
+        closeOpenInput() {
+            let activeDropdown = document.querySelector(".dropdown_list-active");
+                if(activeDropdown && activeDropdown !== this.selectElement) {
+                    activeDropdown.classList.remove("dropdown_list-active");
+                
+                        activeDropdown.dropdown.closeList();
+                         
+                        activeDropdown.dropdown.animatedIcon.style.setProperty('--icon_rotate', "rotate(90deg)")
+                }
+            this.selectElement.classList.add("dropdown_list-active");
+        }
+    }
+    
     
     mediaMatchMobile.addEventListener("change", (event) => {
         if(event.matches) {
@@ -97,36 +185,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     subForm.addEventListener('click', (ev) => {
         let target = ev.target;
+       
     
         if(target.classList.contains('select_input')) {
-    
-            if(isAnimated) {
-                return
-            }
-    
-            isAnimated = true
-            
-    
             let nextElem = target.nextElementSibling;
-            let list = new selectList(nextElem, target);
+            nextElem.dropdown = new selectList(nextElem, target);
+            nextElem.dropdown.closeOpenInput();
     
-            list.change();
+    
+            nextElem.dropdown.change();
             
-        }
-    
-        if(target.classList.contains("find_button")) {
-            if(isAnimated) {
-                return
-            }
-    
-            isAnimated = true
+        } else if(target.classList.contains("find_button")) {
+              
             
     
             let animationItem = target.closest(".animation_container");
             let icon = target.closest(".select_input");
-            let list = new selectList(animationItem, icon);
+            animationItem.dropdown = new selectList(animationItem, icon);
     
-            list.change();
+            animationItem.dropdown.change();
+        } else {
+            let activeDropdown = document.querySelector(".dropdown_list-active");
+            if(activeDropdown) {
+                activeDropdown.classList.remove("dropdown_list-active")
+            activeDropdown.dropdown.change();
+            }
         }
     })
     
@@ -144,45 +227,175 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     
         dropZone.addEventListener('drop', (e) => {
-            fileInput.value = ''
+            //  
             e.preventDefault();
             e.stopPropagation();
     
             const files = e.dataTransfer.files;
-            if (files.length > 0) {
-                const file = files[0];
-                handleFile(file);
-            }
+            readFile(files)
         });
     
         function handleFile(file) {
             const reader = new FileReader();
+            let fileName = file.name;
             reader.onload = function(e) {
-                dropZone.style.backgroundImage = `url(${e.target.result})`;
+                // dropZone.style.backgroundImage = `url(${e.target.result})`;
+                let imgWrapper = document.createElement("div");
+                imgWrapper.classList.add("img_wrapper");
+                let newImage = document.createElement("img");
+                let deleteButton = document.createElement("div");
+                deleteButton.classList.add("img_delete-button");
+                newImage.src = e.target.result;
+                newImage.dataset.name = fileName;
+                imgWrapper.appendChild(newImage);
+                imgWrapper.appendChild(deleteButton);
+                imgConatainer.appendChild(imgWrapper);
+                
     
-                // Помещаем файл в input type="file"
+    
                 const dataTransfer = new DataTransfer();
-                dataTransfer.items.add(file);
+                imgArray.forEach(element => {
+                    dataTransfer.items.add(element)
+                });
                 fileInput.files = dataTransfer.files;
     
-                console.log('Файл добавлен в input type="file"');
             };
             reader.readAsDataURL(file);
+        }
+    
+        function readFile(files) {
+            let arrLengt = imgArray.length;
+            let filterItem = new Set();
+            imgArray = imgArray.concat(Array.from(files)).filter (element => {
+                if(filterItem.has(element.name)) {
+                    console.log(filterItem.has(element.name))
+                    return false 
+                } else {
+                    filterItem.add(element.name)
+                    return true;
+                }
+            })
+    
+            let new_files = imgArray.slice(arrLengt);
+          
+            if (files.length > 0) {
+                new_files.forEach(file => {
+                    handleFile(file);
+                })
+            }
+    
         }
     
         dropZone.addEventListener("click", (e) => {
             e.stopPropagation();
             fileInput.click()
         })
+    
+        fileInput.addEventListener("change", (e) => {
+            const files = e.target.files;
+            readFile(files)
+            console.log(fileInput.files);
+        })
+    
+        imgConatainer.addEventListener("click", (event) => {
+            if(event.target.classList.contains("img_delete-button")) {
+                let deletedItemName = event.target.previousElementSibling.dataset.name;
+                event.target.parentElement.remove();
+                let oldList = Array.from(fileInput.files);
+                let newList = oldList.filter((element) => {
+                   return  element.name !== deletedItemName ;
+                })
+                
+                imgArray.forEach(element => {
+                    if(element.name === deletedItemName) {
+                        imgArray.splice(imgArray.indexOf(element), 1);
+                    }
+     
+                })
+                let transfer = new DataTransfer();
+                newList.forEach((file) => {
+                    transfer.items.add(file)
+                })
+                fileInput.files = transfer.files;
+                console.log(fileInput.files);
+            }
+        })
+    
+        let file_input = document.querySelector(".file_input-label").querySelector("input");
+        let fileList = document.querySelector(".file_input-label").previousElementSibling;
+        file_input.addEventListener("change", (event) => {
+            let files = event.target.files
+                if(files.length === 0 ) {
+                    return
+                }
+    
+           
+                let filterItem = new Set();
+                fileArray = fileArray.concat(Array.from(files)).filter (element => {
+                    if(filterItem.has(element.name)) {
+                        console.log(filterItem.has(element.name))
+                        return false 
+                    } else {
+                        filterItem.add(element.name)
+                        return true;
+                    }
+                })
+    
+            const dataTransfer = new DataTransfer();
+            fileArray.forEach((file) => {
+                dataTransfer.items.add(file)
+            })
+    
+            file_input.files = dataTransfer.files;
+            
+    
+            let newItem = document.createElement("li");
+            newItem.classList.add("doc_file");
+            let newSpan = document.createElement("span");
+            newSpan.textContent = files[0].name;
+            newItem.appendChild(newSpan);
+            let deleteButton = document.createElement("div");
+            deleteButton.classList.add("doc_delete-button");
+            newItem.appendChild(deleteButton);
+    
+            fileList.appendChild(newItem);
+    
+            
+            
+        })
+    
+    
+        fileList.addEventListener("click", (event) => {
+            if(event.target.classList.contains("doc_delete-button")) {
+                let fileName = event.target.previousElementSibling.textContent;
+               fileArray = fileArray.filter(file => {
+                    return file.name!== fileName
+                })
+    
+                const dataTransfer = new DataTransfer();
+                fileArray.forEach((file) => {
+                    dataTransfer.items.add(file)
+                })
+                file_input.files = dataTransfer.files;
+                event.target.parentNode.remove();
+            }
+        })
+    
+
+
+
+
 
         function passwordVisible(element) {
             element.addEventListener("click", (ev) => {
-                if (ev.target.classList.contains("password_icon")) {
-                    const passwordInput = ev.target.previousElementSibling;
+                if (ev.target.closest(".password_icon")) {
+                    const passwordInput = ev.target.closest(".password_icon").previousElementSibling;
                     if (passwordInput.type === "password") {
                         passwordInput.type = "text";
+                        ev.target.closest("svg").querySelector("path").style.fill = "#802836"
                     } else {
                         passwordInput.type = "password";
+                        ev.target.closest("svg").querySelector("path").style.fill = "";
                     }
                 }
             });

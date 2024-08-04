@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>НАВИГАЦИЯ ПО СТРАНИЦАМ</h1>
+    <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="program.html">Программа</a></li>
+        <li><a href="catalog.html">Каталог Разработок</a></li>
+        <li><a href="partners.html">Индустриальные Партнеры</a></li>
+        <li><a href="competition.html">Конкурс</a></li>
+        <li><a href="patisipants.html">Участникам</a></li>
+        <li><a href="contacts.html">Контакты</a></li>
+        <li><a href="profile.html">Профиль</a></li>
+        <li><a href="profile_projects.html">Профиль-проекты</a></li>
+        <li><a href="profile_search-project.html">Профиль - поиск проектов</a></li>
+        <li><a href="profile_communication.html">Профиль-деловое общение</a></li>
+
+        <a data-fancybox href="#allert">необходима регистрация</a>
+        <a data-fancybox href="#confirmation">подтверждение по email</a>
+
+        <div class="hidden">
+            <div class="pop-up allert" id="allert">
+                <h2 class="form-title allert_title">Необходима авторизация</h2>
+                <a href="#entry_form" data-fancybox class="red_button allert_enter-button">Войти</a>
+                <a href="#registration_form" data-fancybox class="catalog_gray-button allert_registr-button">Зарегистрироваться</a>
+            </div>
+            <div class="pop-up confirmation" id="confirmation">
+              <h2 class="form-title">Для подтверждения регистрации перейдите по ссылке в письме</h2>
+              <p>Письмо отправлено на <span class="confirmation_email">ekaterinodar123@gmail.com</span></p>
+              <button type="button" class="red_button confirmation_button">Отлично</button>
+              <a href="#entry_form" data-fancybox class="catalog_gray-button">войти</a>
+          </div>
+        </div>
+    </ul>
+</body>
+</html>
